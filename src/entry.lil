@@ -1,0 +1,7 @@
+import { convertToHast } from "./convert.lil";
+
+export JsValue toHast(JsValue tree, JsValue opt = JS.undefined()) {
+  return convertToHast(tree, opt);
+}
+
+export JsValue default = toHast;

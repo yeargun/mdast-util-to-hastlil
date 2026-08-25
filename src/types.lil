@@ -1,0 +1,89 @@
+export extern class ToHastOptions {
+  JsValue allowDangerousHtml;
+}
+
+export class HastState {
+  Map<string, JsValue> defs;
+  bool allowDangerousHtml;
+
+  init(bool allowDangerousHtml) {
+    this.defs = new Map<string, JsValue>();
+    this.allowDangerousHtml = allowDangerousHtml;
+  }
+}
+
+export bool optionFlag(JsValue value, bool fallback) {
+  if (JS.isUndefined(value) || JS.isNullish(value)) {
+    return fallback;
+  }
+  return value.truthy();
+}
+
+export bool readAllowDangerousHtml(JsValue opt) {
+  if (JS.isUndefined(opt) || JS.isNullish(opt)) {
+    return false;
+  }
+  ToHastOptions incoming = JS.assume(opt);
+  return optionFlag(incoming.allowDangerousHtml, false);
+}
+
+export string stringField(JsValue node, string key) {
+  JsValue value = node[key];
+  if (value is string) {
+    return value;
+  }
+  return "";
+}
+
+export JsValue[] emptyChildren() {
+  JsValue[] children = [];
+  return children;
+}
+
+export JsValue element(string tagName, JsValue properties, JsValue[] children) {
+  return JS.object("type", "element", "tagName", tagName, "properties", properties, "children", children);
+}
+
+export JsValue textNode(string value) {
+  return JS.object("type", "text", "value", value);
+}
+
+export JsValue rawNode(string value) {
+  return JS.object("type", "raw", "value", value);
+}
+
+export JsValue rootNode(JsValue[] children) {
+  return JS.object("type", "root", "children", children);
+}
+
+export void setTitle(JsValue props, JsValue node) {
+  JsValue titleVal = node["title"];
+  if (titleVal is string) {
+    string title = titleVal;
+    if (title.length > 0) {
+      props["title"] = title;
+    }
+  }
+}
+
+export void setAlt(JsValue props, JsValue node) {
+  JsValue altVal = node["alt"];
+  if (altVal is string) {
+    props["alt"] = altVal;
+  } else {
+    props["alt"] = "";
+  }
+}
+
+export string normalizeIdentifier(string value) {
+  Regex spaces = new Regex("\\s+", "g");
+  return value.toLowerCase().replace(spaces, " ").trim();
+}
+
+export string identifierOf(JsValue node) {
+  JsValue idVal = node["identifier"];
+  if (idVal is string) {
+    return normalizeIdentifier(idVal);
+  }
+  return "";
+}

@@ -1,0 +1,305 @@
+import { HastState, element, emptyChildren, identifierOf, rawNode, readAllowDangerousHtml, rootNode, setAlt, setTitle, stringField, textNode } from "./types.lil";
+
+void collectDefs(JsValue node, Map<string, JsValue> defs) {
+  if (JS.isUndefined(node) || JS.isNullish(node)) {
+    return;
+  }
+  JsValue typeVal = node["type"];
+  if (typeVal is string) {
+    string type = typeVal;
+    if (type == "definition") {
+      string id = identifierOf(node);
+      if (id.length > 0) {
+        defs.set(id, node);
+      }
+    }
+  }
+  JsValue children = node["children"];
+  if (!JS.isArray(children)) {
+    return;
+  }
+  int n = JS.number(children["length"]).toInt();
+  int i = 0;
+  while (i < n) {
+    collectDefs(children[i], defs);
+    i = i + 1;
+  }
+}
+
+JsValue[] childHast(JsValue node, HastState state) {
+  JsValue[] kids = [];
+  convertChildren(node, kids, state);
+  return kids;
+}
+
+void convertChildren(JsValue node, JsValue[] out, HastState state) {
+  JsValue children = node["children"];
+  if (!JS.isArray(children)) {
+    return;
+  }
+  int n = JS.number(children["length"]).toInt();
+  int i = 0;
+  while (i < n) {
+    convertNode(children[i], out, state);
+    i = i + 1;
+  }
+}
+
+void setUrl(JsValue props, string key, JsValue node) {
+  props[key] = stringField(node, "url");
+}
+
+int headingDepth(JsValue node) {
+  int depth = 1;
+  JsValue depthVal = node["depth"];
+  if (depthVal is float) {
+    depth = depthVal.toInt();
+  }
+  if (depth < 1) {
+    depth = 1;
+  }
+  if (depth > 6) {
+    depth = 6;
+  }
+  return depth;
+}
+
+JsValue[] convertRow(JsValue row, JsValue alignVal, bool header, HastState state) {
+  JsValue[] out = [];
+  JsValue cells = row["children"];
+  if (!JS.isArray(cells)) {
+    return out;
+  }
+  string tag = "td";
+  if (header) {
+    tag = "th";
+  }
+  int n = JS.number(cells["length"]).toInt();
+  int i = 0;
+  while (i < n) {
+    JsValue cell = cells[i];
+    JsValue props = JS.object();
+    if (JS.isArray(alignVal)) {
+      int alignLen = JS.number(alignVal["length"]).toInt();
+      if (i < alignLen) {
+        JsValue a = alignVal[i];
+        if (a is string) {
+          string align = a;
+          if (align == "left" || align == "center" || align == "right") {
+            props["align"] = align;
+          }
+        }
+      }
+    }
+    out.push(element(tag, props, childHast(cell, state)));
+    i = i + 1;
+  }
+  return out;
+}
+
+JsValue convertTable(JsValue node, HastState state) {
+  JsValue alignVal = node["align"];
+  JsValue[] headKids = [];
+  JsValue[] bodyKids = [];
+  JsValue rows = node["children"];
+  if (JS.isArray(rows)) {
+    int n = JS.number(rows["length"]).toInt();
+    int r = 0;
+    while (r < n) {
+      JsValue row = rows[r];
+      bool header = r == 0;
+      JsValue tr = element("tr", JS.object(), convertRow(row, alignVal, header, state));
+      if (header) {
+        headKids.push(tr);
+      } else {
+        bodyKids.push(tr);
+      }
+      r = r + 1;
+    }
+  }
+  JsValue[] tableKids = [];
+  if (headKids.length > 0) {
+    tableKids.push(element("thead", JS.object(), headKids));
+  }
+  if (bodyKids.length > 0) {
+    tableKids.push(element("tbody", JS.object(), bodyKids));
+  }
+  return element("table", JS.object(), tableKids);
+}
+
+void pushMath(JsValue[] out, string tagName, string extraClass, string value) {
+  string[] classes = [];
+  classes.push("math");
+  classes.push(extraClass);
+  JsValue props = JS.object();
+  props["className"] = classes;
+  JsValue[] kids = [];
+  kids.push(textNode(value));
+  out.push(element(tagName, props, kids));
+}
+
+void convertNode(JsValue node, JsValue[] out, HastState state) {
+  if (JS.isUndefined(node) || JS.isNullish(node)) {
+    return;
+  }
+  JsValue typeVal = node["type"];
+  if (!(typeVal is string)) {
+    return;
+  }
+  string type = typeVal;
+  if (type == "paragraph") {
+    out.push(element("p", JS.object(), childHast(node, state)));
+  } else if (type == "heading") {
+    out.push(element("h" + headingDepth(node).toString(), JS.object(), childHast(node, state)));
+  } else if (type == "thematicBreak") {
+    out.push(element("hr", JS.object(), emptyChildren()));
+  } else if (type == "blockquote") {
+    out.push(element("blockquote", JS.object(), childHast(node, state)));
+  } else if (type == "list") {
+    bool ordered = false;
+    JsValue orderedVal = node["ordered"];
+    if (orderedVal is bool) {
+      ordered = orderedVal;
+    }
+    string tag = "ul";
+    if (ordered) {
+      tag = "ol";
+    }
+    JsValue props = JS.object();
+    if (ordered) {
+      JsValue startVal = node["start"];
+      if (startVal is float) {
+        int start = startVal.toInt();
+        if (start != 1) {
+          props["start"] = start;
+        }
+      }
+    }
+    out.push(element(tag, props, childHast(node, state)));
+  } else if (type == "listItem") {
+    JsValue[] kids = childHast(node, state);
+    JsValue checkedVal = node["checked"];
+    if (checkedVal is bool) {
+      bool checked = checkedVal;
+      JsValue inputProps = JS.object("type", "checkbox", "disabled", true);
+      if (checked) {
+        inputProps["checked"] = true;
+      }
+      JsValue[] withBox = [];
+      withBox.push(element("input", inputProps, emptyChildren()));
+      int k = 0;
+      while (k < kids.length) {
+        withBox.push(kids[k]);
+        k = k + 1;
+      }
+      kids = withBox;
+    }
+    out.push(element("li", JS.object(), kids));
+  } else if (type == "code") {
+    JsValue codeProps = JS.object();
+    JsValue langVal = node["lang"];
+    if (langVal is string) {
+      string lang = langVal;
+      if (lang.length > 0) {
+        string[] classes = [];
+        classes.push("language-" + lang);
+        codeProps["className"] = classes;
+      }
+    }
+    JsValue[] codeKids = [];
+    codeKids.push(textNode(stringField(node, "value")));
+    JsValue[] preKids = [];
+    preKids.push(element("code", codeProps, codeKids));
+    out.push(element("pre", JS.object(), preKids));
+  } else if (type == "inlineCode") {
+    JsValue[] kids = [];
+    kids.push(textNode(stringField(node, "value")));
+    out.push(element("code", JS.object(), kids));
+  } else if (type == "emphasis") {
+    out.push(element("em", JS.object(), childHast(node, state)));
+  } else if (type == "strong") {
+    out.push(element("strong", JS.object(), childHast(node, state)));
+  } else if (type == "delete") {
+    out.push(element("del", JS.object(), childHast(node, state)));
+  } else if (type == "break") {
+    out.push(element("br", JS.object(), emptyChildren()));
+  } else if (type == "link") {
+    JsValue props = JS.object();
+    setUrl(props, "href", node);
+    setTitle(props, node);
+    out.push(element("a", props, childHast(node, state)));
+  } else if (type == "image") {
+    JsValue props = JS.object();
+    setUrl(props, "src", node);
+    setAlt(props, node);
+    setTitle(props, node);
+    out.push(element("img", props, emptyChildren()));
+  } else if (type == "text") {
+    out.push(textNode(stringField(node, "value")));
+  } else if (type == "html") {
+    if (state.allowDangerousHtml) {
+      out.push(rawNode(stringField(node, "value")));
+    }
+  } else if (type == "table") {
+    out.push(convertTable(node, state));
+  } else if (type == "tableRow") {
+    out.push(element("tr", JS.object(), childHast(node, state)));
+  } else if (type == "tableCell") {
+    out.push(element("td", JS.object(), childHast(node, state)));
+  } else if (type == "inlineMath") {
+    pushMath(out, "span", "math-inline", stringField(node, "value"));
+  } else if (type == "math") {
+    pushMath(out, "div", "math-display", stringField(node, "value"));
+  } else if (type == "definition") {
+  } else if (type == "linkReference") {
+    string id = identifierOf(node);
+    JsValue? def = state.defs.get(id);
+    if (def != null) {
+      JsValue found = def;
+      JsValue props = JS.object();
+      setUrl(props, "href", found);
+      setTitle(props, found);
+      out.push(element("a", props, childHast(node, state)));
+    } else {
+      convertChildren(node, out, state);
+    }
+  } else if (type == "imageReference") {
+    string id = identifierOf(node);
+    JsValue? def = state.defs.get(id);
+    if (def != null) {
+      JsValue found = def;
+      JsValue props = JS.object();
+      setUrl(props, "src", found);
+      setAlt(props, node);
+      setTitle(props, found);
+      out.push(element("img", props, emptyChildren()));
+    } else {
+      JsValue altVal = node["alt"];
+      if (altVal is string) {
+        out.push(textNode(altVal));
+      }
+    }
+  } else {
+    convertChildren(node, out, state);
+  }
+}
+
+export JsValue convertToHast(JsValue tree, JsValue opt) {
+  bool allow = readAllowDangerousHtml(opt);
+  HastState state = new HastState(allow);
+  JsValue[] kids = [];
+  if (JS.isUndefined(tree) || JS.isNullish(tree)) {
+    return rootNode(kids);
+  }
+  collectDefs(tree, state.defs);
+  JsValue typeVal = tree["type"];
+  if (typeVal is string) {
+    string type = typeVal;
+    if (type == "root") {
+      convertChildren(tree, kids, state);
+      return rootNode(kids);
+    }
+  }
+  convertNode(tree, kids, state);
+  return rootNode(kids);
+}
