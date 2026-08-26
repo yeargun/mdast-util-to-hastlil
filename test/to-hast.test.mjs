@@ -116,8 +116,8 @@ describe("@itslil/mdast-util-to-hast library", () => {
 
     const p = find(tree, (n) => n.tagName === "p" && n.children?.[0]?.value === "hi")
     assert.equal(p?.children[1]?.tagName, "br")
-    assert.equal(p?.children[2]?.tagName, "code")
-    assert.equal(p?.children[2]?.children[0]?.value, "x")
+    const inlineCode = find(p, (n) => n.tagName === "code")
+    assert.equal(inlineCode?.children[0]?.value, "x")
 
     assert.ok(find(tree, (n) => n.tagName === "hr"))
     assert.ok(find(tree, (n) => n.tagName === "blockquote"))
@@ -133,7 +133,7 @@ describe("@itslil/mdast-util-to-hast library", () => {
 
     const code = find(tree, (n) => n.tagName === "code" && n.properties?.className)
     assert.deepEqual(code?.properties?.className, ["language-js"])
-    assert.equal(code?.children[0]?.value, "ok")
+    assert.equal(code?.children[0]?.value, "ok\n")
     assert.ok(find(tree, (n) => n.tagName === "pre"))
 
     assert.ok(find(tree, (n) => n.tagName === "strong"))
@@ -162,7 +162,7 @@ describe("@itslil/mdast-util-to-hast library", () => {
     const ref = find(tree, (n) => n.tagName === "a" && n.properties?.href === "https://def")
     assert.equal(ref?.properties?.title, "Def")
     assert.equal(ref?.children[0]?.value, "go")
-    const missing = find(tree, (n) => n.type === "text" && n.value === "no")
+    const missing = find(tree, (n) => n.type === "text" && n.value === "[no][missing]")
     assert.ok(missing)
     assert.equal(find(tree, (n) => n.type === "definition"), null)
   })

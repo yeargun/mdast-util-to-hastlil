@@ -10,9 +10,9 @@
   "warmupDiscard": 3,
   "comparison": "Official rows are an esbuild bundle of mdast-util-to-hast@13.2.1 plus its runtime graph, then Terser or esbuild. LilScript is the compiled npm file. Closed is extern_fields=false.",
   "spec": {
-    "total": 6,
-    "pass": 6,
-    "label": "package tests"
+    "total": 148,
+    "pass": 148,
+    "label": "official suite"
   },
   "play": {
     "kind": "json-json",
@@ -56,18 +56,18 @@
     {
       "id": "itslil",
       "name": "@itslil/mdast-util-to-hast · library",
-      "raw": 4074,
-      "gzip9": 1718,
-      "brotli11": 1532,
+      "raw": 16518,
+      "gzip9": 5932,
+      "brotli11": 5315,
       "note": "LilScript js-module, extern_fields true. The npm ESM.",
       "primary": true
     },
     {
       "id": "itslil-closed",
       "name": "@itslil/mdast-util-to-hast · closed",
-      "raw": 3975,
-      "gzip9": 1651,
-      "brotli11": 1452,
+      "raw": 16419,
+      "gzip9": 5860,
+      "brotli11": 5255,
       "note": "Same source, extern_fields false"
     }
   ],

@@ -1,6 +1,6 @@
 # @itslil/mdast-util-to-hast
 
-mdast-util-to-hast reimplemented in LilScript. This is **not** the official [`mdast-util-to-hast`](https://github.com/syntax-tree/mdast-util-to-hast) package.
+Official [`mdast-util-to-hast@13.2.1`](https://github.com/syntax-tree/mdast-util-to-hast) algorithms rewritten in LilScript. Official test suite 148/148. Not affiliated with upstream.
 
 **Site:** [yeargun.github.io/mdast-util-to-hastlil/](https://yeargun.github.io/mdast-util-to-hastlil/)
 

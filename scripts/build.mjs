@@ -16,7 +16,7 @@ const root = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 const lilscriptRoot = process.env.LILSCRIPT_ROOT ?? resolve(root, "..", "lilscript")
 const dist = resolve(root, "dist")
 const file = "to-hast"
-const banner = "/*! @itslil/mdast-util-to-hast 13.2.0 | LilScript reimplementation of mdast-util-to-hast | MIT */\n"
+const banner = "/*! @itslil/mdast-util-to-hast 13.2.1 | LilScript reimplementation of mdast-util-to-hast | MIT */\n"
 
 function compilerPath() {
   const candidates = [
