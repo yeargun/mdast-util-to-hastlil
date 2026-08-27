@@ -56,18 +56,18 @@
     {
       "id": "itslil",
       "name": "@itslil/mdast-util-to-hast · library",
-      "raw": 16518,
-      "gzip9": 5932,
-      "brotli11": 5315,
+      "raw": 12823,
+      "gzip9": 4487,
+      "brotli11": 4048,
       "note": "LilScript js-module, extern_fields true. The npm ESM.",
       "primary": true
     },
     {
       "id": "itslil-closed",
       "name": "@itslil/mdast-util-to-hast · closed",
-      "raw": 16419,
-      "gzip9": 5860,
-      "brotli11": 5255,
+      "raw": 12738,
+      "gzip9": 4442,
+      "brotli11": 4003,
       "note": "Same source, extern_fields false"
     }
   ],
