@@ -3,6 +3,10 @@ import { existsSync, readFileSync } from "node:fs"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath, pathToFileURL } from "node:url"
 import { describe, it } from "node:test"
+import {
+  defaultFootnoteBackContent as officialFootnoteBackContent,
+  defaultFootnoteBackLabel as officialFootnoteBackLabel,
+} from "mdast-util-to-hast"
 
 const root = resolve(dirname(fileURLToPath(import.meta.url)), "..")
 const library = await import("../dist/to-hast.esm.js")
@@ -94,15 +98,62 @@ function find(node, pred) {
 }
 
 describe("@itslil/mdast-util-to-hast library", () => {
-  it("exports toHast and default", () => {
+  it("exports the upstream public API", () => {
     assert.equal(typeof toHast, "function")
-    assert.equal(library.default, toHast)
+    assert.deepEqual(Object.keys(library).sort(), [
+      "defaultFootnoteBackContent",
+      "defaultFootnoteBackLabel",
+      "defaultHandlers",
+      "toHast",
+    ])
+    assert.deepEqual(Object.keys(library.defaultHandlers).sort(), [
+      "blockquote",
+      "break",
+      "code",
+      "definition",
+      "delete",
+      "emphasis",
+      "footnoteDefinition",
+      "footnoteReference",
+      "heading",
+      "html",
+      "image",
+      "imageReference",
+      "inlineCode",
+      "link",
+      "linkReference",
+      "list",
+      "listItem",
+      "paragraph",
+      "root",
+      "strong",
+      "table",
+      "tableCell",
+      "tableRow",
+      "text",
+      "thematicBreak",
+      "toml",
+      "yaml",
+    ])
+  })
+
+  it("preserves numeric footnote helper arguments like upstream", () => {
+    for (const value of [1.5, 2.5, Number.POSITIVE_INFINITY, Number.NaN]) {
+      assert.deepEqual(
+        library.defaultFootnoteBackContent(0, value),
+        officialFootnoteBackContent(0, value),
+      )
+      assert.equal(
+        library.defaultFootnoteBackLabel(value, value),
+        officialFootnoteBackLabel(value, value),
+      )
+    }
   })
 
   it("keeps pinned option and tree keys in the library artifact", () => {
     const source = readFileSync(resolve(root, "dist/to-hast.esm.js"), "utf8")
     assert.match(source, /allowDangerousHtml/)
-    assert.match(source, /["']type["']/)
+    assert.match(source, /(?:\.type|["']type["'])/)
     assert.match(source, /export\{[^}]*\btoHast\b/)
   })
 
@@ -153,11 +204,8 @@ describe("@itslil/mdast-util-to-hast library", () => {
     assert.ok(find(tree, (n) => n.tagName === "thead"))
     assert.ok(find(tree, (n) => n.tagName === "tbody"))
 
-    const inlineMath = find(tree, (n) => n.tagName === "span")
-    assert.deepEqual(inlineMath?.properties?.className, ["math", "math-inline"])
-    assert.equal(inlineMath?.children[0]?.value, "x^2")
-    const displayMath = find(tree, (n) => n.tagName === "div")
-    assert.deepEqual(displayMath?.properties?.className, ["math", "math-display"])
+    assert.ok(find(tree, (n) => n.type === "text" && n.value === "x^2"))
+    assert.ok(find(tree, (n) => n.type === "text" && n.value === "E=mc^2"))
 
     const ref = find(tree, (n) => n.tagName === "a" && n.properties?.href === "https://def")
     assert.equal(ref?.properties?.title, "Def")

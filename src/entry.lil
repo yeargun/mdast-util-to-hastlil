@@ -9,7 +9,6 @@ export JsValue toHast(JsValue tree, JsValue opt = JS.undefined()) {
   return convertToHast(tree, opt);
 }
 
-export JsValue default = toHast;
 export JsValue defaultHandlers = makeDefaultHandlers();
 export JsValue defaultFootnoteBackContent = makeFootnoteBackContent();
 export JsValue defaultFootnoteBackLabel = makeFootnoteBackLabel();

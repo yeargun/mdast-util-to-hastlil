@@ -11,7 +11,7 @@ import {VFile} from 'vfile'
 
 test('toHast', async function (t) {
   await t.test('should expose the public api', async function () {
-    assert.deepEqual(Object.keys(await import('mdast-util-to-hast')).sort(), [
+    assert.deepEqual(Object.keys(await import('../../dist/to-hast.esm.js')).sort(), [
       'defaultFootnoteBackContent',
       'defaultFootnoteBackLabel',
       'defaultHandlers',

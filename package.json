@@ -56,10 +56,16 @@
   "scripts": {
     "build": "node scripts/build.mjs --compile",
     "build:site": "node scripts/build-site.mjs",
-    "test": "node --test test/*.test.mjs test/official/index.js",
+    "test": "npm run test:types && node --test test/*.test.mjs test/official/index.js",
+    "test:types": "tsc --noEmit",
     "check:site": "npm run build:site && node --test test/site.test.mjs",
     "check:pack": "node scripts/check-pack.mjs",
     "prepublishOnly": "npm test && npm run check:pack && npm run check:site"
+  },
+  "dependencies": {
+    "@types/hast": "^3.0.0",
+    "@types/mdast": "^4.0.0",
+    "vfile": "^6.0.0"
   },
   "devDependencies": {
     "esbuild": "0.28.1",
@@ -68,6 +74,6 @@
     "mdast-util-from-markdown": "^2.0.2",
     "mdast-util-gfm": "^3.1.0",
     "micromark-extension-gfm": "^3.0.0",
-    "vfile": "^6.0.3"
+    "typescript": "5.5.4"
   }
 }
