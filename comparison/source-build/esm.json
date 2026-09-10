@@ -1,0 +1,111 @@
+{
+  "source": {
+    "repository": "https://github.com/syntax-tree/mdast-util-to-hast.git",
+    "commit": "174795b21f7757fffb54dd8d5fb4012f4751f791",
+    "package": "mdast-util-to-hast",
+    "version": "13.2.1",
+    "directory": "."
+  },
+  "entry": "index.js",
+  "scope": "mdast-util-to-hast@13.2.1 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
+  "external": [],
+  "samples": [
+    {
+      "bundleSeconds": 0.012340720000000005,
+      "wallSeconds": 0.140294852
+    },
+    {
+      "bundleSeconds": 0.0064386659999999835,
+      "wallSeconds": 0.09734921599999999
+    },
+    {
+      "bundleSeconds": 0.0064484130000000165,
+      "wallSeconds": 0.08841177700000002
+    }
+  ],
+  "medianSeconds": 0.09734921599999999,
+  "toolchain": {
+    "esbuild": "0.28.1",
+    "terser": "5.51.2"
+  },
+  "artifacts": [
+    {
+      "path": "original.esm.js",
+      "raw": 16905,
+      "gzip9": 5474,
+      "brotli11": 4949,
+      "sha256": "073c8c8b066b92163915423479a8a70c2c841d7d895425a31676f47755de9dc9"
+    },
+    {
+      "path": "original.unminified.js",
+      "raw": 38832,
+      "gzip9": 8832,
+      "brotli11": 7888,
+      "sha256": "1677fe32ed4abd68d27beae71ed31833f977f95e7b86a4b62b0bcd87f674cf41"
+    },
+    {
+      "path": "original.terser-nomangle.js",
+      "raw": 24878,
+      "gzip9": 6596,
+      "brotli11": 5982,
+      "sha256": "1a694a98e5780a53714c4cccd523acab780c8cdd85f34dbcb577ec2982576f91"
+    },
+    {
+      "path": "original.esbuild.js",
+      "raw": 17489,
+      "gzip9": 5863,
+      "brotli11": 5336,
+      "sha256": "68d53a0e96754de6ab3d6d6962dfae7d8dc16a4b895ad551a9a309fd622b9a55"
+    }
+  ],
+  "inputs": [
+    "lib/handlers/blockquote.js",
+    "lib/handlers/break.js",
+    "lib/handlers/code.js",
+    "lib/handlers/delete.js",
+    "lib/handlers/emphasis.js",
+    "node_modules/micromark-util-character/index.js",
+    "node_modules/micromark-util-encode/index.js",
+    "node_modules/micromark-util-sanitize-uri/index.js",
+    "lib/handlers/footnote-reference.js",
+    "lib/handlers/heading.js",
+    "lib/handlers/html.js",
+    "lib/revert.js",
+    "lib/handlers/image-reference.js",
+    "lib/handlers/image.js",
+    "lib/handlers/inline-code.js",
+    "lib/handlers/link-reference.js",
+    "lib/handlers/link.js",
+    "lib/handlers/list-item.js",
+    "lib/handlers/list.js",
+    "lib/handlers/paragraph.js",
+    "lib/handlers/root.js",
+    "lib/handlers/strong.js",
+    "node_modules/unist-util-position/lib/index.js",
+    "node_modules/unist-util-position/index.js",
+    "lib/handlers/table.js",
+    "lib/handlers/table-row.js",
+    "lib/handlers/table-cell.js",
+    "node_modules/trim-lines/index.js",
+    "lib/handlers/text.js",
+    "lib/handlers/thematic-break.js",
+    "lib/handlers/index.js",
+    "node_modules/devlop/lib/default.js",
+    "node_modules/@ungap/structured-clone/esm/types.js",
+    "node_modules/@ungap/structured-clone/esm/deserialize.js",
+    "node_modules/@ungap/structured-clone/esm/serialize.js",
+    "node_modules/@ungap/structured-clone/esm/index.js",
+    "lib/footer.js",
+    "node_modules/unist-util-is/lib/index.js",
+    "node_modules/unist-util-is/index.js",
+    "node_modules/unist-util-visit-parents/lib/color.js",
+    "node_modules/unist-util-visit-parents/lib/index.js",
+    "node_modules/unist-util-visit-parents/index.js",
+    "node_modules/unist-util-visit/lib/index.js",
+    "node_modules/unist-util-visit/index.js",
+    "lib/state.js",
+    "lib/index.js",
+    "index.js",
+    "public-esm-entry.mjs"
+  ]
+}

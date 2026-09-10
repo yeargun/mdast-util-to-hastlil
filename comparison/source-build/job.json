@@ -1,0 +1,47 @@
+{
+  "source": {
+    "repository": "https://github.com/syntax-tree/mdast-util-to-hast.git",
+    "commit": "174795b21f7757fffb54dd8d5fb4012f4751f791",
+    "package": "mdast-util-to-hast",
+    "version": "13.2.1",
+    "directory": "."
+  },
+  "portSource": {
+    "commit": "1c0fd2c5e19f2bf9b4d7a269365bcaa5b126c94f"
+  },
+  "compilerCommit": "4dc4e3337d9ffd758d65e3852682d6e13d9331c1",
+  "install": [
+    "npm",
+    "install",
+    "--ignore-scripts",
+    "--no-audit",
+    "--no-fund"
+  ],
+  "setup": [
+    [
+      "npm",
+      "install",
+      "--save-dev",
+      "--save-exact",
+      "--ignore-scripts",
+      "--no-audit",
+      "--no-fund",
+      "@types/mdast@4.0.3",
+      "@types/hast@3.0.4",
+      "typescript@5.5.4"
+    ]
+  ],
+  "build": [
+    "npm",
+    "run",
+    "build"
+  ],
+  "clean": [],
+  "entry": "index.js",
+  "defaultExport": false,
+  "external": [],
+  "esmScope": "mdast-util-to-hast@13.2.1 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
+  "lilscriptBuild": "node scripts/build.mjs --compile --force",
+  "test": "npm run test:types && node --test test/*.test.mjs test/official/index.js",
+  "prerequisiteAdjustments": "Pin declared development type/tool dependencies to versions compatible with this source release: @types/mdast@4.0.3, @types/hast@3.0.4, typescript@5.5.4"
+}
