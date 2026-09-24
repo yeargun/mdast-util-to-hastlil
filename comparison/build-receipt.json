@@ -1,42 +1,38 @@
 {
   "schemaVersion": 1,
   "name": "mdast-util-to-hastlil",
-  "measuredAt": "2026-09-10T13:58:20Z",
-  "status": "verified",
+  "measuredAt": "2026-09-24T05:56:23Z",
+  "status": "published",
   "buildPassed": true,
-  "summary": "The fresh artifact was checked against the repository test command.",
-  "sourceCommit": "1c0fd2c5e19f2bf9b4d7a269365bcaa5b126c94f",
-  "previousPublicCommit": "1c0fd2c5e19f2bf9b4d7a269365bcaa5b126c94f",
+  "summary": "Rebuilt by the one LilScript compiler; every delivered file is compiler-written (a license banner and module wrappers are the only bytes the build adds).",
+  "sourceCommit": "acf5610 plus the release working tree (committed together with these records)",
+  "previousPublicCommit": "acf5610ca7dc0bc6f2a5bcf9812dd50f67c4c4d2",
   "compiler": {
-    "commit": "63c2896a71e60cbcca7870fe979f9d6ecaff3452",
-    "sha256": "2319462ef7d858c8e2a5a767260aa4f80d325e0045afa0cc86cc122d1299b059",
+    "commit": "aa2052f081ca8184666ca280ee9b91d476e46cfc",
+    "sha256": "13cb49a93fb3e376a5978484835322c84adea692b69ae4720775291377cf18f9",
     "profile": "release",
     "dirty": false
   },
   "machine": {
-    "cpu": "AMD EPYC 9V45 96-Core Processor",
-    "logicalCpus": 16,
-    "affinityCpus": 16,
-    "memoryBytes": 33648431104,
-    "os": "Ubuntu 24.04.4 LTS",
-    "kernel": "6.17.0-1022-azure",
-    "architecture": "x86_64",
-    "node": "v22.23.2",
-    "rayonThreads": 16,
     "provider": "Azure",
-    "instanceClass": "Standard_D16als_v7",
-    "parallelPortBuildsOnMachine": 1,
+    "instanceClass": "Standard_B8als_v2",
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "logicalCpus": 8,
+    "memoryBytes": 16706420736,
+    "os": "Ubuntu 24.04.3 LTS",
+    "kernel": "7.0.0-1014-azure",
+    "node": "v24.11.1",
+    "rayonThreads": 8,
     "loadAtStart": [
-      5.72314453125,
-      4.3876953125,
-      2.0458984375
+      10.33203125,
+      13.09619140625,
+      14.97998046875
     ],
     "loadAtEnd": [
-      5.8505859375,
-      4.54345703125,
-      2.17333984375
-    ],
-    "concurrencyNote": "The audit scheduled one port per worker, but this is a shared pool. Outside compiler jobs were observed during the run; timings are contextual wall times, not controlled speedup benchmarks."
+      7.9267578125,
+      11.8876953125,
+      14.453125
+    ]
   },
   "upstream": {
     "name": "mdast-util-to-hastlil",
@@ -48,23 +44,22 @@
   "comparisonScope": "mdast-util-to-hast@13.2.1 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline Sizes use canonical zlib 1.3.1 gzip-9 and Google Brotli 1.1.0 quality 11.",
   "sizes": {
     "previous": {
-      "id": "itslil",
-      "name": "@itslil/mdast-util-to-hast \u00b7 library",
-      "raw": 14246,
-      "gzip9": 4709,
-      "brotli11": 4262,
-      "note": "LilScript js-module, extern_fields true. The npm ESM.",
-      "primary": true
-    },
-    "current": {
       "path": "dist/to-hast.esm.js",
       "raw": 14023,
       "gzip9": 4713,
       "brotli11": 4232,
-      "sha256": "8d29b1f9390d4676511e7df19ac2152ecd175e896f0fd26c86eabed51c18f98f"
+      "sha256": "8d29b1f9390d4676511e7df19ac2152ecd175e896f0fd26c86eabed51c18f98f",
+      "commit": "acf5610ca7dc0bc6f2a5bcf9812dd50f67c4c4d2"
+    },
+    "current": {
+      "path": "dist/to-hast.esm.js",
+      "raw": 16520,
+      "gzip9": 5096,
+      "brotli11": 4552,
+      "sha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc"
     },
     "upstream": {
-      "path": ".page-audit/upstream/official.esm.js",
+      "path": "original.esm.js",
       "raw": 16905,
       "gzip9": 5474,
       "brotli11": 4949,
@@ -73,28 +68,28 @@
   },
   "officialArtifacts": [
     {
-      "path": ".page-audit/upstream/official.terser-nomangle.js",
-      "raw": 24878,
-      "gzip9": 6596,
-      "brotli11": 5982,
-      "sha256": "1a694a98e5780a53714c4cccd523acab780c8cdd85f34dbcb577ec2982576f91"
-    },
-    {
-      "path": ".page-audit/upstream/official.esm.js",
+      "path": "original.esm.js",
       "raw": 16905,
       "gzip9": 5474,
       "brotli11": 4949,
       "sha256": "073c8c8b066b92163915423479a8a70c2c841d7d895425a31676f47755de9dc9"
     },
     {
-      "path": ".page-audit/upstream/official.unminified.js",
-      "raw": 39728,
-      "gzip9": 8849,
-      "brotli11": 7908,
-      "sha256": "e7b618c8f6aca0f1b1ecddd66455e2f56eab8081ed4126bfd008456604537b54"
+      "path": "original.unminified.js",
+      "raw": 38832,
+      "gzip9": 8832,
+      "brotli11": 7888,
+      "sha256": "1677fe32ed4abd68d27beae71ed31833f977f95e7b86a4b62b0bcd87f674cf41"
     },
     {
-      "path": ".page-audit/upstream/official.esbuild.js",
+      "path": "original.terser-nomangle.js",
+      "raw": 24878,
+      "gzip9": 6596,
+      "brotli11": 5982,
+      "sha256": "1a694a98e5780a53714c4cccd523acab780c8cdd85f34dbcb577ec2982576f91"
+    },
+    {
+      "path": "original.esbuild.js",
       "raw": 17489,
       "gzip9": 5863,
       "brotli11": 5336,
@@ -103,106 +98,54 @@
   ],
   "candidateArtifacts": [
     {
-      "path": "dist/to-hast.cjs",
-      "raw": 15517,
-      "gzip9": 5372,
-      "brotli11": 4866,
-      "sha256": "b1cac49f774e959c67f35eb0ca046713e0e641c4f155fcb29bea2e23c949dafc"
-    },
-    {
-      "path": "dist/to-hast.esm.js",
-      "raw": 14023,
-      "gzip9": 4713,
-      "brotli11": 4232,
-      "sha256": "8d29b1f9390d4676511e7df19ac2152ecd175e896f0fd26c86eabed51c18f98f"
-    },
-    {
-      "path": "dist/to-hast.closed.js",
-      "raw": 14767,
-      "gzip9": 4977,
-      "brotli11": 4418,
-      "sha256": "f345881ccb4facd1e6422184801420bb5024755e31a1b563964f55706198a8a5"
-    },
-    {
       "path": "dist/to-hast.raw.js",
-      "raw": 13924,
-      "gzip9": 4643,
-      "brotli11": 4168,
-      "sha256": "c67026fa1c228214e8e3ae63b27fa23ee8e8e5036d68ffd5ff5707bd9231579c"
+      "raw": 16421,
+      "gzip9": 5025,
+      "brotli11": 4476,
+      "sha256": "dd24b0c4fc7c2d4f59d1130b5a8366ca7eea3b85f9f336981b8e9c407ba33ab5"
     },
     {
       "path": "dist/to-hast.umd.js",
-      "raw": 15588,
-      "gzip9": 5406,
-      "brotli11": 4887,
-      "sha256": "2aba74e701a4212ff7632bf7f448608f990273a734251a40a1bce80dcf6af26c"
+      "raw": 16473,
+      "gzip9": 5090,
+      "brotli11": 4537,
+      "sha256": "4ac9b327c8c42ef2aa5ab4833b12bcbb7a799843f764fa470f15e83736be40f6"
     },
     {
-      "path": ".page-audit/upstream/official.esbuild.js",
-      "raw": 17489,
-      "gzip9": 5863,
-      "brotli11": 5336,
-      "sha256": "68d53a0e96754de6ab3d6d6962dfae7d8dc16a4b895ad551a9a309fd622b9a55"
+      "path": "dist/to-hast.esm.js",
+      "raw": 16520,
+      "gzip9": 5096,
+      "brotli11": 4552,
+      "sha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc"
     },
     {
-      "path": ".page-audit/upstream/official.terser-nomangle.js",
-      "raw": 24878,
-      "gzip9": 6596,
-      "brotli11": 5982,
-      "sha256": "1a694a98e5780a53714c4cccd523acab780c8cdd85f34dbcb577ec2982576f91"
+      "path": "dist/to-hast.cjs",
+      "raw": 16533,
+      "gzip9": 5109,
+      "brotli11": 4547,
+      "sha256": "f8374f7a893ae72cc076b17b0181ac60e00be32b37fb819f62fae44f7d728609"
     },
     {
-      "path": ".page-audit/upstream/official.unminified.js",
-      "raw": 39728,
-      "gzip9": 8849,
-      "brotli11": 7908,
-      "sha256": "e7b618c8f6aca0f1b1ecddd66455e2f56eab8081ed4126bfd008456604537b54"
-    },
-    {
-      "path": ".page-audit/upstream/official.esm.js",
-      "raw": 16905,
-      "gzip9": 5474,
-      "brotli11": 4949,
-      "sha256": "073c8c8b066b92163915423479a8a70c2c841d7d895425a31676f47755de9dc9"
+      "path": "dist/to-hast.closed.js",
+      "raw": 17983,
+      "gzip9": 6647,
+      "brotli11": 5740,
+      "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
     }
   ],
   "timing": {
-    "primaryCompilerSeconds": 22.059587717056274,
-    "primaryScope": "One real compiler process, including code generation and codec-guided search; excludes subsequent package wrapping.",
-    "packageSeconds": 24.195428266000135,
-    "packageScope": "node scripts/build.mjs --compile --force; 2 successful compiler invocations plus package generation.",
-    "upstreamSeconds": 0.14524757300000005,
-    "upstreamScope": "mdast-util-to-hast@13.2.1 public ESM runtime graph; dependency installation excluded; this is a comparison bundle build, not the upstream vendor release pipeline",
-    "protocol": "Same shared worker for both lanes; one fresh LilScript package build; median of three sequential upstream ESM builds (PlayCanvas records one native reference build). Outside compiler jobs were observed in the pool, so contention is not excluded. Dependencies, tests and compression measurement are outside these build times.",
-    "upstreamSamples": [
-      {
-        "bundleSeconds": 0.008007209000000003,
-        "wallSeconds": 0.239864822
-      },
-      {
-        "bundleSeconds": 0.009191175000000044,
-        "wallSeconds": 0.14524757300000005
-      },
-      {
-        "bundleSeconds": 0.006010853999999995,
-        "wallSeconds": 0.12103356500000001
-      }
-    ]
+    "primaryCompilerSeconds": 0.41888427734375,
+    "primaryScope": "One compiler process for the shipped ESM (src/entry.lil, lilscript.toml)",
+    "packageSeconds": 0.817010446000495,
+    "packageScope": "node scripts/build.mjs --compile --force; 2 compiler invocations plus package wrapping",
+    "originalSeconds": 11.727842031992623,
+    "originalScope": "npm run build"
   },
   "behavior": {
     "command": "npm run test:types && node --test test/*.test.mjs test/official/index.js",
-    "summary": "Repository test command passed (exit 0). # tests 149 \u00b7 # pass 149 \u00b7 # fail 0",
-    "before": {
-      "exitCode": 0,
-      "failures": [],
-      "logSha256": "d20ceccaed6e134d61df3f972fbc16ec322fb89fc45e2437c2dfefc433e936b0"
-    },
-    "after": {
-      "exitCode": 0,
-      "failures": [],
-      "tail": " duration_ms: 0.07333\n      type: 'test'\n      ...\n    # Subtest: should handle a table node w/o rows\n    ok 3 - should handle a table node w/o rows\n      ---\n      duration_ms: 0.036875\n      type: 'test'\n      ...\n    # Subtest: should handle a table row node w/ cells\n    ok 4 - should handle a table row node w/ cells\n      ---\n      duration_ms: 0.064967\n      type: 'test'\n      ...\n    # Subtest: should handle a table row node w/o cells\n    ok 5 - should handle a table row node w/o cells\n      ---\n      duration_ms: 0.037326\n      type: 'test'\n      ...\n    # Subtest: should handle a table cell node w/ children\n    ok 6 - should handle a table cell node w/ children\n      ---\n      duration_ms: 0.042032\n      type: 'test'\n      ...\n    # Subtest: should handle a table cell node w/o children\n    ok 7 - should handle a table cell node w/o children\n      ---\n      duration_ms: 0.02723\n      type: 'test'\n      ...\n    1..7\nok 23 - table\n  ---\n  duration_ms: 0.603683\n  type: 'test'\n  ...\n# Subtest: text\n    # Subtest: should map `text`s\n    ok 1 - should map `text`s\n      ---\n      duration_ms: 0.031768\n      type: 'test'\n      ...\n    # Subtest: should trim spaces and tabs around eols\n    ok 2 - should trim spaces and tabs around eols\n      ---\n      duration_ms: 0.03324\n      type: 'test'\n      ...\n    # Subtest: should transform text nodes w/ `hName` to an `element`\n    ok 3 - should transform text nodes w/ `hName` to an `element`\n      ---\n      duration_ms: 0.035743\n      type: 'test'\n      ...\n    # Subtest: should ignore `hProperties` on text nodes w/o `hName`\n    ok 4 - should ignore `hProperties` on text nodes w/o `hName`\n      ---\n      duration_ms: 0.028192\n      type: 'test'\n      ...\n    # Subtest: should transform text nodes w/ `hProperties` and `hName` to an `element`\n    ok 5 - should transform text nodes w/ `hProperties` and `hName` to an `element`\n      ---\n      duration_ms: 0.04697\n      type: 'test'\n      ...\n    # Subtest: should not transform text nodes w/ `hChildren` w/o `hName` to an `element`\n    ok 6 - should not transform text nodes w/ `hChildren` w/o `hName` to an `element`\n      ---\n      duration_ms: 0.032769\n      type: 'test'\n      ...\n    # Subtest: should transform text nodes w/ `hChildren` and `hName` to an `element`\n    ok 7 - should transform text nodes w/ `hChildren` and `hName` to an `element`\n      ---\n      duration_ms: 0.03328\n      type: 'test'\n      ...\n    1..7\nok 24 - text\n  ---\n  duration_ms: 0.372216\n  type: 'test'\n  ...\n# Subtest: thematicBreak\n    # Subtest: should transform `thematicBreak` to `hr`\n    ok 1 - should transform `thematicBreak` to `hr`\n      ---\n      duration_ms: 0.058217\n      type: 'test'\n      ...\n    1..1\nok 25 - thematicBreak\n  ---\n  duration_ms: 0.096434\n  type: 'test'\n  ...\n# Subtest: toml\n    # Subtest: should ignore `toml`\n    ok 1 - should ignore `toml`\n      ---\n      duration_ms: 0.034051\n      type: 'test'\n      ...\n    1..1\nok 26 - toml\n  ---\n  duration_ms: 0.071367\n  type: 'test'\n  ...\n# Subtest: yaml\n    # Subtest: should ignore `yaml`\n    ok 1 - should ignore `yaml`\n      ---\n      duration_ms: 0.030776\n      type: 'test'\n      ...\n    1..1\nok 27 - yaml\n  ---\n  duration_ms: 0.063495\n  type: 'test'\n  ...\n# Subtest: site\n    # Subtest: has a markedlil-style lab with receipts\n    ok 1 - has a markedlil-style lab with receipts\n      ---\n      duration_ms: 2.247691\n      type: 'test'\n      ...\n    1..1\nok 28 - site\n  ---\n  duration_ms: 2.763723\n  type: 'suite'\n  ...\n# Subtest: @itslil/mdast-util-to-hast library\n    # Subtest: exports the upstream public API\n    ok 1 - exports the upstream public API\n      ---\n      duration_ms: 0.760277\n      type: 'test'\n      ...\n    # Subtest: preserves numeric footnote helper arguments like upstream\n    ok 2 - preserves numeric footnote helper arguments like upstream\n      ---\n      duration_ms: 0.272968\n      type: 'test'\n      ...\n    # Subtest: keeps pinned option and tree keys in the library artifact\n    ok 3 - keeps pinned option and tree keys in the library artifact\n      ---\n      duration_ms: 0.245297\n      type: 'test'\n      ...\n    # Subtest: maps a mdast fixture to hast elements\n    ok 4 - maps a mdast fixture to hast elements\n      ---\n      duration_ms: 1.628676\n      type: 'test'\n      ...\n    # Subtest: skips html when allowDangerousHtml is off\n    ok 5 - skips html when allowDangerousHtml is off\n      ---\n      duration_ms: 0.131677\n      type: 'test'\n      ...\n    1..5\nok 29 - @itslil/mdast-util-to-hast library\n  ---\n  duration_ms: 3.61057\n  type: 'suite'\n  ...\n# Subtest: @itslil/mdast-util-to-hast closed lane\n    # Subtest: exists and still converts a tree\n    ok 1 - exists and still converts a tree\n      ---\n      duration_ms: 1.16318\n      type: 'test'\n      ...\n    1..1\nok 30 - @itslil/mdast-util-to-hast closed lane\n  ---\n  duration_ms: 1.227206\n  type: 'suite'\n  ...\n1..30\n# tests 149\n# suites 3\n# pass 149\n# fail 0\n# cancelled 0\n# skipped 0\n# todo 0\n# duration_ms 145.437655\n",
-      "logSha256": "4e9f2c8c37b7bae31540f222b643777d94c3d78f37be945886f9ab3a1e43c32f"
-    }
+    "summary": "Runtime checks: 154/154 pass.",
+    "exitCode": 0,
+    "logSha256": "388303c8f88a96ba8bf8c0de4ecc5020914c31c826547ec6867487b26bf6fc93"
   },
   "findings": [
     "Published-to-fresh Brotli drift: -30 bytes (-0.70%). This includes port source/config changes and compiler changes."
@@ -214,28 +157,28 @@
     "sha256": "f085cd18d05fa8da033f0cdccfd132da10b6832203b97e094c54c5405068eada",
     "lastModified": "Wed, 02 Sep 2026 15:24:58 GMT"
   },
-  "codecSha256": "9257fd055728895c11b9c4b0d882895d7d11bb3dd3495f560123879ca2bc3cd6",
+  "codecSha256": "125776830df72bbaf9704fee3c38bb0bf29bfc6bcceb5bc8707a0507a128d7b9",
   "publicationArtifacts": [
     {
       "path": "dist/to-hast.cjs",
-      "sha256": "b1cac49f774e959c67f35eb0ca046713e0e641c4f155fcb29bea2e23c949dafc"
-    },
-    {
-      "path": "dist/to-hast.esm.js",
-      "sha256": "8d29b1f9390d4676511e7df19ac2152ecd175e896f0fd26c86eabed51c18f98f"
+      "sha256": "f8374f7a893ae72cc076b17b0181ac60e00be32b37fb819f62fae44f7d728609"
     },
     {
       "path": "dist/to-hast.closed.js",
-      "sha256": "f345881ccb4facd1e6422184801420bb5024755e31a1b563964f55706198a8a5"
+      "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+    },
+    {
+      "path": "dist/to-hast.esm.js",
+      "sha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc"
     },
     {
       "path": "dist/to-hast.umd.js",
-      "sha256": "2aba74e701a4212ff7632bf7f448608f990273a734251a40a1bce80dcf6af26c"
+      "sha256": "4ac9b327c8c42ef2aa5ab4833b12bcbb7a799843f764fa470f15e83736be40f6"
     }
   ],
-  "publicationPolicy": "Promote freshly tested distribution",
-  "publicationBase": "1c0fd2c5e19f2bf9b4d7a269365bcaa5b126c94f",
-  "publicationSourceFingerprint": "5ce02b6e9702d37e5b608b1f278fe88115f6a7828309821b2619e5dcac775a8f",
+  "publicationPolicy": "Publish the compiler-written distribution",
+  "publicationBase": "acf5610ca7dc0bc6f2a5bcf9812dd50f67c4c4d2",
+  "publicationSourceFingerprint": "a61a659b4c322c13c15db9c8dcf3b42cb50a7775524e775e0aafca1b893e9944",
   "comparisonArtifacts": [
     {
       "path": "site/esm-comparison/original.js",
@@ -243,25 +186,25 @@
     },
     {
       "path": "site/esm-comparison/lilscript.js",
-      "sha256": "8d29b1f9390d4676511e7df19ac2152ecd175e896f0fd26c86eabed51c18f98f"
+      "sha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc"
     },
     {
       "path": "site/source-build.json",
-      "sha256": "7475737fdc3b0526665bfd042864455c83af91a382c2fb5a1d90693f914b21ba"
+      "sha256": "033dc71c99bfca5a51b815d30f513387e8febb0ab203ec40a35a221f8197d9cd"
     },
     {
       "path": "site/comparison.json",
-      "sha256": "6f6f8ce500f1608077d0be11f2d61f5e42f4db1e5786c98a7e958f441f1ccba0"
+      "sha256": "4289e9b76832a654c0e53d78b3b5b3227653e15e43f725de49bf96bc5e81b900"
     }
   ],
   "sourceBuildReceipt": "comparison/source-build/result.json",
   "currentMeasurement": {
     "compiler": {
-      "commit": "4dc4e3337d9ffd758d65e3852682d6e13d9331c1",
-      "sha256": "0616048498eb9eb2e4bd75b39e8e6a083733ada647e16108edfee30ad183beeb"
+      "commit": "aa2052f081ca8184666ca280ee9b91d476e46cfc",
+      "sha256": "13cb49a93fb3e376a5978484835322c84adea692b69ae4720775291377cf18f9"
     },
     "source": {
-      "commit": "1c0fd2c5e19f2bf9b4d7a269365bcaa5b126c94f"
+      "commit": "acf5610 plus the release working tree (committed together with these records)"
     },
     "upstream": {
       "repository": "https://github.com/syntax-tree/mdast-util-to-hast.git",
@@ -270,6 +213,6 @@
       "version": "13.2.1",
       "directory": "."
     },
-    "compatibility": "Runtime checks: 149/149 pass."
+    "compatibility": "Runtime checks: 154/154 pass."
   }
 }

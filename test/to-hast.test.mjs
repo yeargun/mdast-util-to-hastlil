@@ -3,6 +3,8 @@ import { existsSync, readFileSync } from "node:fs"
 import { dirname, resolve } from "node:path"
 import { fileURLToPath, pathToFileURL } from "node:url"
 import { describe, it } from "node:test"
+import { createRequire } from "node:module"
+import { runInNewContext } from "node:vm"
 import {
   defaultFootnoteBackContent as officialFootnoteBackContent,
   defaultFootnoteBackLabel as officialFootnoteBackLabel,
@@ -238,5 +240,26 @@ describe("@itslil/mdast-util-to-hast closed lane", () => {
     assert.equal(tree.type, "root")
     assert.equal(tree.children[0].tagName, "p")
     assert.equal(tree.children[0].children[0].value, "hi")
+  })
+})
+
+describe("@itslil/mdast-util-to-hast CommonJS and browser builds", () => {
+  const expected = JSON.stringify(toHast(fixture()))
+  const exported = Object.keys(library).sort()
+
+  it("require() returns the ESM's exports, converting alike", () => {
+    const cjs = createRequire(import.meta.url)("../dist/to-hast.cjs")
+    assert.deepEqual(Object.keys(cjs).sort(), exported)
+    assert.equal(JSON.stringify(cjs.toHast(fixture())), expected)
+    assert.equal(cjs.defaultFootnoteBackLabel(0, 2), library.defaultFootnoteBackLabel(0, 2))
+    assert.equal(typeof cjs.defaultHandlers.paragraph, "function")
+  })
+
+  it("the browser script sets the global toHast and nothing else", () => {
+    const sandbox = {}
+    sandbox.globalThis = sandbox
+    runInNewContext(readFileSync(resolve(root, "dist/to-hast.umd.js"), "utf8"), sandbox)
+    assert.deepEqual(Object.keys(sandbox).filter((key) => key !== "globalThis"), ["toHast"])
+    assert.equal(JSON.stringify(sandbox.toHast(fixture())), expected)
   })
 })
