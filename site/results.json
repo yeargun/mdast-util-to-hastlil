@@ -98,13 +98,13 @@
     {
       "id": "itslil",
       "name": "@itslil/mdast-util-to-hast · library",
-      "raw": 16520,
-      "gzip9": 5096,
-      "brotli11": 4552,
-      "note": "The npm ESM: LilScript aa2052f0 output with a license banner.",
+      "raw": 16322,
+      "gzip9": 5072,
+      "brotli11": 4520,
+      "note": "The npm ESM: LilScript 24968659 output with a license banner.",
       "primary": true,
-      "measuredAt": "2026-09-24T05:44:59Z",
-      "artifactSha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc"
+      "measuredAt": "2026-09-27T14:47:58Z",
+      "artifactSha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
     },
     {
       "id": "itslil-closed",
@@ -112,39 +112,39 @@
       "raw": 17983,
       "gzip9": 6647,
       "brotli11": 5740,
-      "note": "LilScript aa2052f0 under lilscript.closed.toml; diagnostic only.",
-      "measuredAt": "2026-09-24T05:44:59Z",
+      "note": "LilScript 24968659 under lilscript.closed.toml; diagnostic only.",
+      "measuredAt": "2026-09-27T14:47:58Z",
       "artifactSha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
     }
   ],
-  "sizeMeasuredAt": "2026-09-24T05:44:59Z",
+  "sizeMeasuredAt": "2026-09-27T14:47:58Z",
   "delivered": [
     {
       "path": "dist/to-hast.esm.js",
       "condition": "import",
       "writtenBy": "compiler",
       "wrapper": "license banner",
-      "raw": 16520,
-      "gzip9": 5096,
-      "brotli11": 4552
+      "raw": 16322,
+      "gzip9": 5072,
+      "brotli11": 4520
     },
     {
       "path": "dist/to-hast.cjs",
       "condition": "require",
       "writtenBy": "compiler",
       "wrapper": "license banner, CommonJS export object",
-      "raw": 16533,
-      "gzip9": 5109,
-      "brotli11": 4547
+      "raw": 16335,
+      "gzip9": 5084,
+      "brotli11": 4531
     },
     {
       "path": "dist/to-hast.umd.js",
       "condition": "browser script (unpkg, jsdelivr)",
       "writtenBy": "compiler",
       "wrapper": "license banner, function scope, global toHast",
-      "raw": 16473,
-      "gzip9": 5090,
-      "brotli11": 4537
+      "raw": 16275,
+      "gzip9": 5065,
+      "brotli11": 4523
     },
     {
       "path": "dist/to-hast.closed.js",
@@ -158,47 +158,47 @@
   ],
   "previousRelease": {
     "label": "previous release",
-    "commit": "acf5610",
-    "date": "2026-09-10",
-    "compiler": "the old compiler route (lilscript 4dc4e33, deleted 2026-09-24)",
-    "measuredWith": "the same lilscript-codec, on the dist files committed at acf5610",
-    "note": "The npm ESM was the old compiler's output with a banner; the CommonJS and browser files were esbuild reprints of it (whitespace minified).",
+    "commit": "1904d9a",
+    "date": "2026-09-24",
+    "compiler": "LilScript aa2052f0, the one compiler (the 2026-09-24 release)",
+    "measuredWith": "the same lilscript-codec, on the dist files committed at 1904d9a",
+    "note": "Every delivered file was already compiler-written: the ESM with a license banner, the CommonJS and browser files with module wrappers.",
     "files": {
       "dist/to-hast.esm.js": {
-        "raw": 14023,
-        "gzip9": 4713,
-        "brotli11": 4232
+        "raw": 16520,
+        "gzip9": 5096,
+        "brotli11": 4552
       },
       "dist/to-hast.cjs": {
-        "raw": 15517,
-        "gzip9": 5372,
-        "brotli11": 4866
+        "raw": 16533,
+        "gzip9": 5109,
+        "brotli11": 4547
       },
       "dist/to-hast.umd.js": {
-        "raw": 15588,
-        "gzip9": 5406,
-        "brotli11": 4887
+        "raw": 16473,
+        "gzip9": 5090,
+        "brotli11": 4537
       },
       "dist/to-hast.closed.js": {
-        "raw": 14767,
-        "gzip9": 4977,
-        "brotli11": 4418
+        "raw": 17983,
+        "gzip9": 6647,
+        "brotli11": 5740
       }
     }
   },
   "compiler": {
-    "revision": "aa2052f0",
-    "binarySha256": "13cb49a93fb3e376a5978484835322c84adea692b69ae4720775291377cf18f9",
-    "codecSha256": "125776830df72bbaf9704fee3c38bb0bf29bfc6bcceb5bc8707a0507a128d7b9",
+    "revision": "24968659",
+    "binarySha256": "47048e41164027e92d3bf1d1840d8d83e04c60532c031ceb3346222e194b3041",
+    "codecSha256": "85329d361ef3339d4ff7b7ca1f00065d561340eb4fc98a2799af327134a3a3f0",
     "compileWallMs": [
-      1311.6,
-      500.4,
-      396.2
+      610.1,
+      557.2,
+      784.8
     ],
     "buildCompileWallMs": [
-      1510.2,
-      621.7,
-      507.4
+      674.4,
+      644.4,
+      884.7
     ],
     "invocations": [
       {
@@ -217,28 +217,28 @@
     "host": "Azure Standard_B8als_v2 (burstable), 8 vCPUs, Node v24.11.1",
     "loadAverage": {
       "start": [
-        9.12,
-        13.78,
-        15.35
+        6.79,
+        4.76,
+        5.45
       ],
       "end": [
-        9.12,
-        13.78,
-        15.35
+        6.72,
+        4.78,
+        5.45
       ]
     },
-    "date": "2026-09-24"
+    "date": "2026-09-27"
   },
   "throughput": [
     {
       "id": "official",
       "name": "mdast-util-to-hast@13.2.1",
-      "documentMs": 9.132
+      "documentMs": 3.855
     },
     {
       "id": "itslil",
       "name": "@itslil/mdast-util-to-hast",
-      "documentMs": 0.735
+      "documentMs": 1.011
     }
   ],
   "throughputDocument": "upstream's readme.md (38251 characters, GFM) as one mdast tree, 200 alternating runs"

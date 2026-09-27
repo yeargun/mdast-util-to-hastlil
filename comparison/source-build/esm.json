@@ -11,19 +11,19 @@
   "external": [],
   "samples": [
     {
-      "bundleSeconds": 0.09330447900000001,
-      "wallSeconds": 1.7740086750000004
+      "bundleSeconds": 0.045747278999999995,
+      "wallSeconds": 0.457184295
     },
     {
-      "bundleSeconds": 0.07899939399999995,
-      "wallSeconds": 1.0839961129999998
+      "bundleSeconds": 0.022831639999999993,
+      "wallSeconds": 0.35266828800000005
     },
     {
-      "bundleSeconds": 0.09377281799999991,
-      "wallSeconds": 0.8650580440000003
+      "bundleSeconds": 0.019895527000000017,
+      "wallSeconds": 0.27340644700000005
     }
   ],
-  "medianSeconds": 1.0839961129999998,
+  "medianSeconds": 0.35266828800000005,
   "toolchain": {
     "esbuild": "0.28.1",
     "terser": "5.51.2"
