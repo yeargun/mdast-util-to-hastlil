@@ -16,14 +16,13 @@ Built by LilScript `24968659`, the one compiler. Sizes are from `lilscript-codec
 
 | File | Raw | gzip-9 | Brotli-11 |
 | --- | ---: | ---: | ---: |
-| **`dist/to-hast.esm.js`** (npm ESM) | **16,322** | **5,072** | **4,520** |
-| Official · Terser mangle on (strongest bar) | 16,710 | 5,388 | 4,860 |
-| Official · Oxc mangle on (Vite 8.2.1) | 16,730 | 5,511 | 5,008 |
-| Official · esbuild minify | 17,289 | 5,765 | 5,245 |
+| **`dist/to-hast.esm.js`** (npm ESM) | **19,483** | **6,127** | **5,464** |
+| Official · Terser mangle on (strongest bar) | 16,905 | 5,474 | 4,949 |
+| Official · Oxc mangle on (Vite 8.2.1) | 16,928 | 5,603 | 5,090 |
+| Official · esbuild minify | 17,489 | 5,863 | 5,336 |
 | Official · pinned Git source, Terser mangle on | 16,905 | 5,474 | 4,949 |
-| Previous release (`1904d9a`, LilScript `aa2052f0`) | 16,520 | 5,096 | 4,552 |
 
-The npm ESM is 340 B (7.0%) smaller than Terser in Brotli, 316 B in gzip and 388 B raw. It is 32 B (0.7%) smaller in Brotli than the previous release, which LilScript `aa2052f0` built.
+The npm ESM is 515 B (10.4%) larger than Terser in Brotli, 653 B larger in gzip and 2,578 B larger raw. Both carry @ungap/structured-clone's polyfill for runtimes without structuredClone, which upstream ships and this port matches.
 
 ## Delivered files
 
@@ -31,10 +30,10 @@ Every file the package delivers is the compiler's own output. No minifier runs a
 
 | File | Loaded by | Written by | Brotli-11 |
 | --- | --- | --- | ---: |
-| `dist/to-hast.esm.js` | `import` | compiler + license banner | 4,520 |
-| `dist/to-hast.cjs` | `require` | compiler + license banner, `module.exports` object in place of the export clause | 4,531 |
-| `dist/to-hast.umd.js` | browser script (unpkg, jsdelivr) | compiler + license banner, one function scope and the global `toHast` in place of the export clause | 4,523 |
-| `dist/to-hast.closed.js` | `./closed` | compiler (diagnostic lane) | 5,740 |
+| `dist/to-hast.esm.js` | `import` | compiler + license banner | 5,464 |
+| `dist/to-hast.cjs` | `require` | compiler + license banner, `module.exports` object in place of the export clause | 5,478 |
+| `dist/to-hast.umd.js` | browser script (unpkg, jsdelivr) | compiler + license banner, one function scope and the global `toHast` in place of the export clause | 5,442 |
+| `dist/to-hast.closed.js` | `./closed` | compiler (diagnostic lane) | 6,945 |
 
 Until the 2026-09-24 release the CommonJS and browser files were esbuild reprints of the ESM.
 
@@ -47,16 +46,16 @@ You publish the library lane. `dist/to-hast.closed.js` is diagnostic only.
 
 ## Compile time
 
-Measured on the release host (Azure Standard_B8als_v2, 8 vCPUs, burstable; other sessions were compiling on it, 1-minute load average about 6 to 7), three clean builds each:
+Measured on the release host (Azure Standard_B8als_v2, 8 vCPUs, burstable; other sessions were compiling on it, 1-minute load average about 2 to 4), three clean builds each:
 
 | What | Wall time |
 | --- | ---: |
-| Compiler process for the npm ESM (`lilscript.toml`) | 0.61 / 0.56 / 0.78 s (median 0.61 s) |
-| Both compiler processes of a build | 0.67 / 0.64 / 0.88 s (median 0.67 s) |
-| Package build, `node scripts/build.mjs --compile --force` (paired source build) | 0.77 s median (0.77 to 0.92 s) |
-| Upstream repository build, `npm run build` (paired source build) | 4.93 s median (4.63 to 5.30 s) |
+| Compiler process for the npm ESM (`lilscript.toml`) | 0.62 / 0.64 / 0.67 s (median 0.64 s) |
+| Both compiler processes of a build | 0.70 / 0.71 / 0.75 s (median 0.71 s) |
+| Package build, `node scripts/build.mjs --compile --force` (paired source build) | 0.87 s median (0.87 to 0.87 s) |
+| Upstream repository build, `npm run build` (paired source build) | 4.43 s median (4.33 to 4.53 s) |
 
-The two builds produce different outputs (upstream's runs `tsc` and type coverage), so no speedup is claimed. The previous release (2026-09-24, `aa2052f0`, the same host under heavier load) recorded a 0.82 s package build and an 11.73 s upstream build.
+The two builds produce different outputs (upstream's runs `tsc` and type coverage), so no speedup is claimed.
 
 `npm run record:release` (with `LILSCRIPT_COMPILER` and `LILSCRIPT_CODEC` set) rebuilds three times, checks the builds are byte-identical, and records sizes, compile times, the suite and a throughput sample in `site/results.json`. `comparison/source-build/` holds the paired source builds of this port and of upstream's repository.
 

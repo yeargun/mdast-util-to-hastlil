@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "name": "mdast-util-to-hastlil",
-  "startedAt": "2026-09-27T14:48:14Z",
+  "startedAt": "2026-09-28T13:05:22Z",
   "machine": {
     "provider": "Azure",
     "instanceClass": "Standard_B8als_v2",
@@ -13,14 +13,14 @@
     "node": "v24.11.1",
     "rayonThreads": 8,
     "loadAtStart": [
-      6.54443359375,
-      4.837890625,
-      5.46240234375
+      2.06640625,
+      1.9228515625,
+      2.177734375
     ],
     "loadAtEnd": [
-      6.02783203125,
-      4.85205078125,
-      5.44970703125
+      3.54443359375,
+      2.26953125,
+      2.28662109375
     ]
   },
   "compiler": {
@@ -35,7 +35,7 @@
     "directory": "."
   },
   "portSource": {
-    "commit": "9ca0b5b10f07e6d52fe3f72b376c7bcb6bc970d1",
+    "commit": "882fbdcb816e87972e0bd933f4067028c72e826b",
     "snapshot": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil"
   },
   "prerequisiteAdjustments": "Pin declared development type/tool dependencies to versions compatible with this source release: @types/mdast@4.0.3, @types/hast@3.0.4, typescript@5.5.4",
@@ -49,8 +49,8 @@
         "--no-fund"
       ],
       "cwd": "upstream",
-      "wallSeconds": 1.520027468970511,
-      "cpuSeconds": 1.804069,
+      "wallSeconds": 1.267805807001423,
+      "cpuSeconds": 1.55383,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-install.log",
@@ -71,13 +71,13 @@
         "typescript@5.5.4"
       ],
       "cwd": "upstream",
-      "wallSeconds": 1.8194545690203086,
-      "cpuSeconds": 1.955094,
+      "wallSeconds": 1.417905652007903,
+      "cpuSeconds": 1.7220469999999999,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-setup-0.log",
-      "logSha256": "ce7bf91f54adc7390cff6bf1c2572fd00ce9cfbd0611637e273059c4710a80c9",
-      "tail": "\nup to date in 2s\n"
+      "logSha256": "b125771fda8addd462adfe7f7b03299feb35e28badbb2d16ae8589e371216f8f",
+      "tail": "\nup to date in 1s\n"
     },
     "original-build-1": {
       "command": [
@@ -86,8 +86,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 4.934237039997242,
-      "cpuSeconds": 8.799125,
+      "wallSeconds": 4.325070445993333,
+      "cpuSeconds": 8.345303,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-1.log",
@@ -101,8 +101,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.7658778259647079,
-      "cpuSeconds": 0.7289029999999983,
+      "wallSeconds": 0.8661231430014595,
+      "cpuSeconds": 0.8522419999999993,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-1.log",
@@ -119,11 +119,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520502.628549,
-          "wallSeconds": 0.5260038375854492,
+          "startedAt": 1790600730.016571,
+          "wallSeconds": 0.6374475955963135,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -135,11 +135,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520503.1967902,
-          "wallSeconds": 0.0637214183807373,
+          "startedAt": 1790600730.693867,
+          "wallSeconds": 0.07684135437011719,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     },
@@ -150,8 +150,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.76588860998163,
-      "cpuSeconds": 0.7293619999999996,
+      "wallSeconds": 0.8658562830096344,
+      "cpuSeconds": 0.8430449999999992,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-2.log",
@@ -168,11 +168,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520503.395557,
-          "wallSeconds": 0.5291504859924316,
+          "startedAt": 1790600730.8936543,
+          "wallSeconds": 0.6239609718322754,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -184,11 +184,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520503.9645927,
-          "wallSeconds": 0.06192207336425781,
+          "startedAt": 1790600731.5570629,
+          "wallSeconds": 0.07306742668151855,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     },
@@ -199,8 +199,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 4.628429811971728,
-      "cpuSeconds": 8.644577,
+      "wallSeconds": 4.528055302012945,
+      "cpuSeconds": 8.597938000000003,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-2.log",
@@ -214,8 +214,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 5.298623258015141,
-      "cpuSeconds": 9.102220000000003,
+      "wallSeconds": 4.425697123006103,
+      "cpuSeconds": 8.451367999999999,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-3.log",
@@ -229,8 +229,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.9194309620070271,
-      "cpuSeconds": 0.9035290000000007,
+      "wallSeconds": 0.8660790499998257,
+      "cpuSeconds": 0.8364410000000015,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-3.log",
@@ -247,11 +247,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520514.1193953,
-          "wallSeconds": 0.6659207344055176,
+          "startedAt": 1790600740.7078776,
+          "wallSeconds": 0.6254873275756836,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -263,24 +263,24 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520514.84294,
-          "wallSeconds": 0.06680560111999512,
+          "startedAt": 1790600741.373222,
+          "wallSeconds": 0.0750885009765625,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     },
     "original-esm": {
       "command": [
         "node",
-        "/home/azureuser/lilscript-work/release-0927/srcbuild/mdast-util-to-hastlil/source-build/tools/source-esm.mjs",
-        "/home/azureuser/lilscript-work/release-0927/srcbuild/mdast-util-to-hastlil/source-build",
+        "/home/azureuser/lilscript-work/release-0928/srcbuild/mdast-util-to-hastlil/source-build/tools/source-esm.mjs",
+        "/home/azureuser/lilscript-work/release-0928/srcbuild/mdast-util-to-hastlil/source-build",
         "mdast-util-to-hastlil"
       ],
       "cwd": "upstream",
-      "wallSeconds": 1.724201324977912,
-      "cpuSeconds": 2.5852709999999997,
+      "wallSeconds": 1.2170122190000257,
+      "cpuSeconds": 2.136599000000001,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-esm.log",
@@ -294,13 +294,13 @@
         "npm run test:types && node --test test/*.test.mjs test/official/index.js"
       ],
       "cwd": "port",
-      "wallSeconds": 2.275760939985048,
-      "cpuSeconds": 3.6399210000000015,
+      "wallSeconds": 1.7694230180059094,
+      "cpuSeconds": 3.5417319999999974,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-tests.log",
-      "logSha256": "32a0b8baeb969582b45148d35f0cd3c63b0a4b8a840c82f9ce14c47d985e2f14",
-      "tail": "kboxes in `listItem`s (`false`, loose item) (0.299511ms)\n  \u2714 should support checkboxes in `listItem`s w/o paragraph (0.204393ms)\n  \u2714 should support checkboxes in `listItem`s that don\u2019t start with paragraphs (0.192751ms)\n  \u2714 should support `listItem`s without children (0.103364ms)\n  \u2714 should support checkboxes in `listItem`s without children (0.186499ms)\n  \u2714 should support lists in `listItem`s (0.300123ms)\n\u2714 listItem (3.387297ms)\n\u25b6 list\n  \u2714 should transform ordered lists to `ol` (0.146354ms)\n  \u2714 should transform unordered lists to `ul` (0.196258ms)\n  \u2714 should identify task list items in unordered lists (0.240881ms)\n  \u2714 should support `start` in ordered lists (0.210845ms)\n\u2714 list (1.156377ms)\n\u25b6 paragraph\n  \u2714 should transform `paragraph` to a `p` element (0.10694ms)\n\u2714 paragraph (0.238286ms)\n\u25b6 root\n  \u2714 should map `root`s (0.103484ms)\n  \u2714 should transform root nodes w/ `hName` (1.303793ms)\n  \u2714 should transform root nodes w/ `hName`, `hProperties` (0.239138ms)\n  \u2714 should transform root nodes w/ `hName`, `hChildren` (0.177793ms)\n\u2714 root (2.171059ms)\n\u25b6 strong\n  \u2714 should transform `strong` to `strong` (0.106089ms)\n\u2714 strong (0.227315ms)\n\u25b6 table\n  \u2714 should transform `table` (0.263825ms)\n  \u2714 should not add a `tbody` if w/o second row (0.296285ms)\n  \u2714 should handle a table node w/o rows (0.116508ms)\n  \u2714 should handle a table row node w/ cells (0.120656ms)\n  \u2714 should handle a table row node w/o cells (0.093775ms)\n  \u2714 should handle a table cell node w/ children (0.112431ms)\n  \u2714 should handle a table cell node w/o children (0.096491ms)\n\u2714 table (1.865666ms)\n\u25b6 text\n  \u2714 should map `text`s (0.145423ms)\n  \u2714 should trim spaces and tabs around eols (0.102401ms)\n  \u2714 should transform text nodes w/ `hName` to an `element` (0.105478ms)\n  \u2714 should ignore `hProperties` on text nodes w/o `hName` (0.142708ms)\n  \u2714 should transform text nodes w/ `hProperties` and `hName` to an `element` (0.120996ms)\n  \u2714 should not transform text nodes w/ `hChildren` w/o `hName` to an `element` (0.086262ms)\n  \u2714 should transform text nodes w/ `hChildren` and `hName` to an `element` (0.096331ms)\n\u2714 text (1.244201ms)\n\u25b6 thematicBreak\n  \u2714 should transform `thematicBreak` to `hr` (0.112521ms)\n\u2714 thematicBreak (0.233678ms)\n\u25b6 toml\n  \u2714 should ignore `toml` (0.159399ms)\n\u2714 toml (0.334276ms)\n\u25b6 yaml\n  \u2714 should ignore `yaml` (0.167774ms)\n\u2714 yaml (0.345838ms)\n\u25b6 site\n  \u2714 has a markedlil-style lab with receipts (7.759128ms)\n  \u2714 records the compiler run it shows (0.466464ms)\n  \u2714 shows the sizes of the files that ship (2.945349ms)\n  \u2714 compares against the strongest recorded bar (0.65664ms)\n\u2714 site (13.780291ms)\n\u25b6 @itslil/mdast-util-to-hast library\n  \u2714 exports the upstream public API (3.045256ms)\n  \u2714 preserves numeric footnote helper arguments like upstream (0.8542ms)\n  \u2714 keeps pinned option and tree keys in the library artifact (0.538048ms)\n  \u2714 maps a mdast fixture to hast elements (2.2895ms)\n  \u2714 skips html when allowDangerousHtml is off (0.366227ms)\n\u2714 @itslil/mdast-util-to-hast library (8.906639ms)\n\u25b6 @itslil/mdast-util-to-hast closed lane\n  \u2714 exists and still converts a tree (3.859772ms)\n\u2714 @itslil/mdast-util-to-hast closed lane (4.029891ms)\n\u25b6 @itslil/mdast-util-to-hast CommonJS and browser builds\n  \u2714 require() returns the ESM's exports, converting alike (3.709951ms)\n  \u2714 the browser script sets the global toHast and nothing else (4.78211ms)\n\u2714 @itslil/mdast-util-to-hast CommonJS and browser builds (8.922719ms)\n\u2139 tests 154\n\u2139 suites 4\n\u2139 pass 154\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 429.033749\n"
+      "logSha256": "a87a81b901e848dd7d1ff21806ee3277f39cbc0758f2e425a6520fbbba23c7c2",
+      "tail": "at don\u2019t start with paragraphs (0.255829ms)\n  \u2714 should support `listItem`s without children (0.141585ms)\n  \u2714 should support checkboxes in `listItem`s without children (0.223519ms)\n  \u2714 should support lists in `listItem`s (0.237285ms)\n\u2714 listItem (3.617428ms)\n\u25b6 list\n  \u2714 should transform ordered lists to `ol` (0.157435ms)\n  \u2714 should transform unordered lists to `ul` (0.157275ms)\n  \u2714 should identify task list items in unordered lists (0.216226ms)\n  \u2714 should support `start` in ordered lists (0.211166ms)\n\u2714 list (1.071157ms)\n\u25b6 paragraph\n  \u2714 should transform `paragraph` to a `p` element (0.123722ms)\n\u2714 paragraph (0.26675ms)\n\u25b6 root\n  \u2714 should map `root`s (0.155661ms)\n  \u2714 should transform root nodes w/ `hName` (0.17579ms)\n  \u2714 should transform root nodes w/ `hName`, `hProperties` (0.249047ms)\n  \u2714 should transform root nodes w/ `hName`, `hChildren` (0.134622ms)\n\u2714 root (1.047813ms)\n\u25b6 strong\n  \u2714 should transform `strong` to `strong` (0.173255ms)\n\u2714 strong (0.312897ms)\n\u25b6 table\n  \u2714 should transform `table` (0.295534ms)\n  \u2714 should not add a `tbody` if w/o second row (0.206457ms)\n  \u2714 should handle a table node w/o rows (0.162895ms)\n  \u2714 should handle a table row node w/ cells (0.147867ms)\n  \u2714 should handle a table row node w/o cells (0.128892ms)\n  \u2714 should handle a table cell node w/ children (0.129212ms)\n  \u2714 should handle a table cell node w/o children (0.102021ms)\n\u2714 table (1.732246ms)\n\u25b6 text\n  \u2714 should map `text`s (0.121447ms)\n  \u2714 should trim spaces and tabs around eols (0.114144ms)\n  \u2714 should transform text nodes w/ `hName` to an `element` (0.116929ms)\n  \u2714 should ignore `hProperties` on text nodes w/o `hName` (0.1069ms)\n  \u2714 should transform text nodes w/ `hProperties` and `hName` to an `element` (0.134442ms)\n  \u2714 should not transform text nodes w/ `hChildren` w/o `hName` to an `element` (0.116208ms)\n  \u2714 should transform text nodes w/ `hChildren` and `hName` to an `element` (0.104306ms)\n\u2714 text (1.411785ms)\n\u25b6 thematicBreak\n  \u2714 should transform `thematicBreak` to `hr` (0.217558ms)\n\u2714 thematicBreak (0.409667ms)\n\u25b6 toml\n  \u2714 should ignore `toml` (0.196919ms)\n\u2714 toml (0.409237ms)\n\u25b6 yaml\n  \u2714 should ignore `yaml` (0.161552ms)\n\u2714 yaml (0.321121ms)\n\u25b6 site\n  \u2714 has a markedlil-style lab with receipts (4.56848ms)\n  \u2714 records the compiler run it shows (0.450684ms)\n  \u2714 shows the sizes of the files that ship (1.998835ms)\n  \u2714 compares against the strongest recorded bar (0.361387ms)\n\u2714 site (8.614441ms)\n\u2714 hProperties copy as upstream's, without a native structuredClone (the polyfill) (109.795282ms)\n\u2714 hProperties copy as upstream's, with the native structuredClone (88.554687ms)\n\u25b6 @itslil/mdast-util-to-hast library\n  \u2714 exports the upstream public API (1.98542ms)\n  \u2714 preserves numeric footnote helper arguments like upstream (0.595977ms)\n  \u2714 keeps pinned option and tree keys in the library artifact (0.595936ms)\n  \u2714 maps a mdast fixture to hast elements (1.608724ms)\n  \u2714 skips html when allowDangerousHtml is off (0.312927ms)\n\u2714 @itslil/mdast-util-to-hast library (6.410431ms)\n\u25b6 @itslil/mdast-util-to-hast closed lane\n  \u2714 exists and still converts a tree (2.805247ms)\n\u2714 @itslil/mdast-util-to-hast closed lane (2.948234ms)\n\u25b6 @itslil/mdast-util-to-hast CommonJS and browser builds\n  \u2714 require() returns the ESM's exports, converting alike (4.239173ms)\n  \u2714 the browser script sets the global toHast and nothing else (4.934656ms)\n\u2714 @itslil/mdast-util-to-hast CommonJS and browser builds (9.497636ms)\n\u2139 tests 156\n\u2139 suites 4\n\u2139 pass 156\n\u2139 fail 0\n\u2139 cancelled 0\n\u2139 skipped 0\n\u2139 todo 0\n\u2139 duration_ms 393.14841\n"
     }
   },
   "nativeBuilds": [
@@ -311,8 +311,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 4.934237039997242,
-      "cpuSeconds": 8.799125,
+      "wallSeconds": 4.325070445993333,
+      "cpuSeconds": 8.345303,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-1.log",
@@ -326,8 +326,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 4.628429811971728,
-      "cpuSeconds": 8.644577,
+      "wallSeconds": 4.528055302012945,
+      "cpuSeconds": 8.597938000000003,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-2.log",
@@ -341,8 +341,8 @@
         "build"
       ],
       "cwd": "upstream",
-      "wallSeconds": 5.298623258015141,
-      "cpuSeconds": 9.102220000000003,
+      "wallSeconds": 4.425697123006103,
+      "cpuSeconds": 8.451367999999999,
       "exitCode": 0,
       "timedOut": false,
       "log": "original-build-3.log",
@@ -358,8 +358,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.7658778259647079,
-      "cpuSeconds": 0.7289029999999983,
+      "wallSeconds": 0.8661231430014595,
+      "cpuSeconds": 0.8522419999999993,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-1.log",
@@ -376,11 +376,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520502.628549,
-          "wallSeconds": 0.5260038375854492,
+          "startedAt": 1790600730.016571,
+          "wallSeconds": 0.6374475955963135,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -392,11 +392,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520503.1967902,
-          "wallSeconds": 0.0637214183807373,
+          "startedAt": 1790600730.693867,
+          "wallSeconds": 0.07684135437011719,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     },
@@ -407,8 +407,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.76588860998163,
-      "cpuSeconds": 0.7293619999999996,
+      "wallSeconds": 0.8658562830096344,
+      "cpuSeconds": 0.8430449999999992,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-2.log",
@@ -425,11 +425,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520503.395557,
-          "wallSeconds": 0.5291504859924316,
+          "startedAt": 1790600730.8936543,
+          "wallSeconds": 0.6239609718322754,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -441,11 +441,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520503.9645927,
-          "wallSeconds": 0.06192207336425781,
+          "startedAt": 1790600731.5570629,
+          "wallSeconds": 0.07306742668151855,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     },
@@ -456,8 +456,8 @@
         "node scripts/build.mjs --compile --force"
       ],
       "cwd": "port",
-      "wallSeconds": 0.9194309620070271,
-      "cpuSeconds": 0.9035290000000007,
+      "wallSeconds": 0.8660790499998257,
+      "cpuSeconds": 0.8364410000000015,
       "exitCode": 0,
       "timedOut": false,
       "log": "lilscript-build-3.log",
@@ -474,11 +474,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js"
           ],
-          "startedAt": 1790520514.1193953,
-          "wallSeconds": 0.6659207344055176,
+          "startedAt": 1790600740.7078776,
+          "wallSeconds": 0.6254873275756836,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.raw.js",
-          "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+          "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
         },
         {
           "args": [
@@ -490,11 +490,11 @@
             "-o",
             "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js"
           ],
-          "startedAt": 1790520514.84294,
-          "wallSeconds": 0.06680560111999512,
+          "startedAt": 1790600741.373222,
+          "wallSeconds": 0.0750885009765625,
           "exitCode": 0,
           "output": "/home/azureuser/lilscript-work/release-0927/ports/mdast-util-to-hastlil/dist/to-hast.closed.js",
-          "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+          "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
         }
       ]
     }
@@ -519,19 +519,19 @@
     "external": [],
     "samples": [
       {
-        "bundleSeconds": 0.045747278999999995,
-        "wallSeconds": 0.457184295
+        "bundleSeconds": 0.024135573000000007,
+        "wallSeconds": 0.332755728
       },
       {
-        "bundleSeconds": 0.022831639999999993,
-        "wallSeconds": 0.35266828800000005
+        "bundleSeconds": 0.015930288000000018,
+        "wallSeconds": 0.21693036300000007
       },
       {
-        "bundleSeconds": 0.019895527000000017,
-        "wallSeconds": 0.27340644700000005
+        "bundleSeconds": 0.012752143000000046,
+        "wallSeconds": 0.18808854200000008
       }
     ],
-    "medianSeconds": 0.35266828800000005,
+    "medianSeconds": 0.21693036300000007,
     "toolchain": {
       "esbuild": "0.28.1",
       "terser": "5.51.2"
@@ -620,54 +620,54 @@
   "lilscriptArtifacts": [
     {
       "path": "dist/to-hast.raw.js",
-      "raw": 16223,
-      "gzip9": 5003,
-      "brotli11": 4453,
-      "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+      "raw": 19384,
+      "gzip9": 6059,
+      "brotli11": 5395,
+      "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
     },
     {
       "path": "dist/to-hast.umd.js",
-      "raw": 16275,
-      "gzip9": 5065,
-      "brotli11": 4523,
-      "sha256": "0ddae5115afe897da96a7e1138097916d58de52fed2cdaa2d5fd54cd6c222141"
+      "raw": 19436,
+      "gzip9": 6115,
+      "brotli11": 5442,
+      "sha256": "bd4d93947afed06e40027a66eef94571c5237c18162c07766e42458e9500a15e"
     },
     {
       "path": "dist/to-hast.esm.js",
-      "raw": 16322,
-      "gzip9": 5072,
-      "brotli11": 4520,
-      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
+      "raw": 19483,
+      "gzip9": 6127,
+      "brotli11": 5464,
+      "sha256": "9c2c186ecc464b0109a35b6f1e51fff1e132780af404c1e03e18fe38d1dd347d"
     },
     {
       "path": "dist/to-hast.cjs",
-      "raw": 16335,
-      "gzip9": 5084,
-      "brotli11": 4531,
-      "sha256": "02773c1504733c240adfca7cece9d028ea93187363e746fff98f961eafbd6f0a"
+      "raw": 19496,
+      "gzip9": 6147,
+      "brotli11": 5478,
+      "sha256": "8328d67281453577542de52409fbe4a97f6a745946bcdd1273f59fc56ceab94e"
     },
     {
       "path": "dist/to-hast.closed.js",
-      "raw": 17983,
-      "gzip9": 6647,
-      "brotli11": 5740,
-      "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+      "raw": 21477,
+      "gzip9": 7998,
+      "brotli11": 6945,
+      "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
     }
   ],
   "nativeBuildsSummary": {
     "samples": 3,
     "successful": 3,
-    "medianSeconds": 4.934237039997242,
-    "minimumSeconds": 4.628429811971728,
-    "maximumSeconds": 5.298623258015141
+    "medianSeconds": 4.425697123006103,
+    "minimumSeconds": 4.325070445993333,
+    "maximumSeconds": 4.528055302012945
   },
   "lilscriptBuildsSummary": {
     "samples": 3,
     "successful": 3,
-    "medianSeconds": 0.76588860998163,
-    "minimumSeconds": 0.7658778259647079,
-    "maximumSeconds": 0.9194309620070271
+    "medianSeconds": 0.8660790499998257,
+    "minimumSeconds": 0.8658562830096344,
+    "maximumSeconds": 0.8661231430014595
   },
   "status": "complete",
-  "finishedAt": "2026-09-27T14:48:39Z"
+  "finishedAt": "2026-09-28T13:05:44Z"
 }

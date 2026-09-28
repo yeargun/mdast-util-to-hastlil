@@ -1,12 +1,12 @@
 {
   "schemaVersion": 1,
   "name": "mdast-util-to-hastlil",
-  "measuredAt": "2026-09-27T14:48:39Z",
+  "measuredAt": "2026-09-28T13:05:44Z",
   "status": "published",
   "buildPassed": true,
   "summary": "Rebuilt by the one LilScript compiler; every delivered file is compiler-written (a license banner and module wrappers are the only bytes the build adds).",
-  "sourceCommit": "9ca0b5b10f07e6d52fe3f72b376c7bcb6bc970d1",
-  "previousPublicCommit": "1904d9a14c8c87c8bf41b5dfd31e6429a53a13cf",
+  "sourceCommit": "882fbdcb816e87972e0bd933f4067028c72e826b",
+  "previousPublicCommit": "d05256c0f3ee951b459db1ef87330a37cfd559ab",
   "compiler": {
     "commit": "249686599dc3bf1b6bf70dc9a030081b755bbb24",
     "sha256": "47048e41164027e92d3bf1d1840d8d83e04c60532c031ceb3346222e194b3041",
@@ -24,14 +24,14 @@
     "node": "v24.11.1",
     "rayonThreads": 8,
     "loadAtStart": [
-      6.54443359375,
-      4.837890625,
-      5.46240234375
+      2.06640625,
+      1.9228515625,
+      2.177734375
     ],
     "loadAtEnd": [
-      6.02783203125,
-      4.85205078125,
-      5.44970703125
+      3.54443359375,
+      2.26953125,
+      2.28662109375
     ]
   },
   "upstream": {
@@ -45,18 +45,18 @@
   "sizes": {
     "previous": {
       "path": "dist/to-hast.esm.js",
-      "raw": 16520,
-      "gzip9": 5096,
-      "brotli11": 4552,
-      "sha256": "e24b386ead3326667ffc78189af5f733600ea5bb2d865b62c0bbb4dad23817bc",
-      "commit": "1904d9a14c8c87c8bf41b5dfd31e6429a53a13cf"
-    },
-    "current": {
-      "path": "dist/to-hast.esm.js",
       "raw": 16322,
       "gzip9": 5072,
       "brotli11": 4520,
-      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
+      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151",
+      "commit": "d05256c0f3ee951b459db1ef87330a37cfd559ab"
+    },
+    "current": {
+      "path": "dist/to-hast.esm.js",
+      "raw": 19483,
+      "gzip9": 6127,
+      "brotli11": 5464,
+      "sha256": "9c2c186ecc464b0109a35b6f1e51fff1e132780af404c1e03e18fe38d1dd347d"
     },
     "upstream": {
       "path": "original.esm.js",
@@ -99,86 +99,86 @@
   "candidateArtifacts": [
     {
       "path": "dist/to-hast.raw.js",
-      "raw": 16223,
-      "gzip9": 5003,
-      "brotli11": 4453,
-      "sha256": "3e41855b56a8e64efa92128085eb2706447a4fc19c866d5d5496543353de3c77"
+      "raw": 19384,
+      "gzip9": 6059,
+      "brotli11": 5395,
+      "sha256": "278765b4c27ffbbceb37691246b63142d95873471f8be9694d88a9ab3c05eedd"
     },
     {
       "path": "dist/to-hast.umd.js",
-      "raw": 16275,
-      "gzip9": 5065,
-      "brotli11": 4523,
-      "sha256": "0ddae5115afe897da96a7e1138097916d58de52fed2cdaa2d5fd54cd6c222141"
+      "raw": 19436,
+      "gzip9": 6115,
+      "brotli11": 5442,
+      "sha256": "bd4d93947afed06e40027a66eef94571c5237c18162c07766e42458e9500a15e"
     },
     {
       "path": "dist/to-hast.esm.js",
-      "raw": 16322,
-      "gzip9": 5072,
-      "brotli11": 4520,
-      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
+      "raw": 19483,
+      "gzip9": 6127,
+      "brotli11": 5464,
+      "sha256": "9c2c186ecc464b0109a35b6f1e51fff1e132780af404c1e03e18fe38d1dd347d"
     },
     {
       "path": "dist/to-hast.cjs",
-      "raw": 16335,
-      "gzip9": 5084,
-      "brotli11": 4531,
-      "sha256": "02773c1504733c240adfca7cece9d028ea93187363e746fff98f961eafbd6f0a"
+      "raw": 19496,
+      "gzip9": 6147,
+      "brotli11": 5478,
+      "sha256": "8328d67281453577542de52409fbe4a97f6a745946bcdd1273f59fc56ceab94e"
     },
     {
       "path": "dist/to-hast.closed.js",
-      "raw": 17983,
-      "gzip9": 6647,
-      "brotli11": 5740,
-      "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+      "raw": 21477,
+      "gzip9": 7998,
+      "brotli11": 6945,
+      "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
     }
   ],
   "timing": {
-    "primaryCompilerSeconds": 0.5291504859924316,
+    "primaryCompilerSeconds": 0.6254873275756836,
     "primaryScope": "One compiler process for the shipped ESM (src/entry.lil, lilscript.toml)",
-    "packageSeconds": 0.76588860998163,
+    "packageSeconds": 0.8660790499998257,
     "packageScope": "node scripts/build.mjs --compile --force; 2 compiler invocations plus package wrapping",
-    "originalSeconds": 4.934237039997242,
+    "originalSeconds": 4.425697123006103,
     "originalScope": "npm run build"
   },
   "behavior": {
     "command": "npm run test:types && node --test test/*.test.mjs test/official/index.js",
-    "summary": "Runtime checks: 154/154 pass.",
+    "summary": "Runtime checks: 156/156 pass.",
     "exitCode": 0,
-    "logSha256": "32a0b8baeb969582b45148d35f0cd3c63b0a4b8a840c82f9ce14c47d985e2f14"
+    "logSha256": "a87a81b901e848dd7d1ff21806ee3277f39cbc0758f2e425a6520fbbba23c7c2"
   },
   "findings": [
-    "Published-to-fresh Brotli drift: -32 bytes (-0.70%). This includes port source/config changes and compiler changes."
+    "Published-to-fresh Brotli drift: +944 bytes (+20.88%). This includes port source/config changes and compiler changes."
   ],
   "primaryArtifact": "dist/to-hast.esm.js",
   "beforePage": {
     "url": "https://yeargun.github.io/mdast-util-to-hastlil/",
     "status": 200,
-    "sha256": "c57f05a619d26a0b57bc49cf1d2d64bd1d465dcf0741927c5bacc288b86a4267",
-    "lastModified": "Thu, 24 Sep 2026 05:59:06 GMT"
+    "sha256": "2dc0df04e8c7d3aa39f4a5e16db8700a505f6ebc33025925908270c886db8b13",
+    "lastModified": "Sun, 27 Sep 2026 15:11:45 GMT"
   },
   "codecSha256": "85329d361ef3339d4ff7b7ca1f00065d561340eb4fc98a2799af327134a3a3f0",
   "publicationArtifacts": [
     {
       "path": "dist/to-hast.cjs",
-      "sha256": "02773c1504733c240adfca7cece9d028ea93187363e746fff98f961eafbd6f0a"
+      "sha256": "8328d67281453577542de52409fbe4a97f6a745946bcdd1273f59fc56ceab94e"
     },
     {
       "path": "dist/to-hast.closed.js",
-      "sha256": "89c71159e59c7432b2bcef5d3fb97e889dcb591f881a1727b900dbb3bbca2785"
+      "sha256": "ed577174136502e71ba128625ad62100465528c2d758b53693268731c13c6a7f"
     },
     {
       "path": "dist/to-hast.esm.js",
-      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
+      "sha256": "9c2c186ecc464b0109a35b6f1e51fff1e132780af404c1e03e18fe38d1dd347d"
     },
     {
       "path": "dist/to-hast.umd.js",
-      "sha256": "0ddae5115afe897da96a7e1138097916d58de52fed2cdaa2d5fd54cd6c222141"
+      "sha256": "bd4d93947afed06e40027a66eef94571c5237c18162c07766e42458e9500a15e"
     }
   ],
   "publicationPolicy": "Publish the compiler-written distribution",
-  "publicationBase": "1904d9a14c8c87c8bf41b5dfd31e6429a53a13cf",
-  "publicationSourceFingerprint": "a61a659b4c322c13c15db9c8dcf3b42cb50a7775524e775e0aafca1b893e9944",
+  "publicationBase": "d05256c0f3ee951b459db1ef87330a37cfd559ab",
+  "publicationSourceFingerprint": "5ff2302a7134f5c597f30e702ac464e611d64529e2a624e8623c1229cacb1312",
   "comparisonArtifacts": [
     {
       "path": "site/esm-comparison/original.js",
@@ -186,15 +186,15 @@
     },
     {
       "path": "site/esm-comparison/lilscript.js",
-      "sha256": "721ade49b5e95507c223b5b379317d8d1119d3c835a0d5081e1e42439f2fa151"
+      "sha256": "9c2c186ecc464b0109a35b6f1e51fff1e132780af404c1e03e18fe38d1dd347d"
     },
     {
       "path": "site/source-build.json",
-      "sha256": "aeb5abf5c5b65fdc012923522c9c85a0fc279563ab4a34b4e5b3cbc9b33d2fb2"
+      "sha256": "cd72b4d863bfb91d1afdb6ce4886c9b97bcbb71ee1c0115b224f02eed3b0e481"
     },
     {
       "path": "site/comparison.json",
-      "sha256": "527384a35625681c1f94795b5ab2975a13f87d41ae71c7add256d394d84933a2"
+      "sha256": "639a65d25a55d7ad15ac2fdb583143b8d545e4e2af65ac75a9f34b03d097f7e8"
     }
   ],
   "sourceBuildReceipt": "comparison/source-build/result.json",
@@ -204,7 +204,7 @@
       "sha256": "47048e41164027e92d3bf1d1840d8d83e04c60532c031ceb3346222e194b3041"
     },
     "source": {
-      "commit": "9ca0b5b10f07e6d52fe3f72b376c7bcb6bc970d1"
+      "commit": "882fbdcb816e87972e0bd933f4067028c72e826b"
     },
     "upstream": {
       "repository": "https://github.com/syntax-tree/mdast-util-to-hast.git",
@@ -213,6 +213,6 @@
       "version": "13.2.1",
       "directory": "."
     },
-    "compatibility": "Runtime checks: 154/154 pass."
+    "compatibility": "Runtime checks: 156/156 pass."
   }
 }
