@@ -1,0 +1,106 @@
+{
+  "schemaVersion": 1,
+  "package": "@itslil/mdast-util-to-hast",
+  "version": "13.2.2",
+  "checkedAt": "2026-10-03T15:05:12.092876+00:00",
+  "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+  "buildReport": "./comparison/package-build-report.json",
+  "packageBuildSeconds": 37.467,
+  "validation": {
+    "ok": true,
+    "checks": [
+      {
+        "suite": "test",
+        "command": [
+          "bash",
+          "-c",
+          "npm run test:types && node --test-concurrency=1 --test test/*.test.mjs test/official/index.js"
+        ],
+        "returncode": 0,
+        "log": "./comparison/package-validation/test.log",
+        "logSha256": "2b24aeab9768a87a2e6b1c6b9eed6788068091c39f15b98e325a6160b4f18483"
+      },
+      {
+        "suite": "pack",
+        "command": [
+          "npm",
+          "run",
+          "check:pack"
+        ],
+        "returncode": 0,
+        "log": "./comparison/package-validation/pack.log",
+        "logSha256": "1fd981f5c334af4f47c1e696ae5182d91ff47d5a7a25f83a0e99a844468e26af"
+      }
+    ]
+  },
+  "sources": [
+    {
+      "path": "src/browser.lil",
+      "sha256": "fe095bb8cba9bbd4b1a89abe816bbceff060ac4edcb7dcc954de7ed1560619c8"
+    },
+    {
+      "path": "src/convert.lil",
+      "sha256": "51067d670f95b55b7072a1cbe1beca7d8d8c91c7f882e6271056f1e4519342af"
+    },
+    {
+      "path": "src/entry.lil",
+      "sha256": "1158713d6d03877bcd4ad8c93c6118c9580a4fc8bc4ab7620fe6b9ccb4ef3e58"
+    },
+    {
+      "path": "src/structured-clone.lil",
+      "sha256": "a5dfbee9c82ac59ccbda7fafd55217d0dd90cbf0d3d13a9818e3a211fec8a259"
+    },
+    {
+      "path": "src/types.lil",
+      "sha256": "6323ae0c126df16614bf8a6473e3256058a0485abc22879fe2a0f6554c717aea"
+    }
+  ],
+  "artifacts": [
+    {
+      "path": "dist/.lilscript/closed.json",
+      "bytes": 3421,
+      "sha256": "6e7d376b2a3ae1a72d9a1d15d269fcb41a30b12362872af4358b7fd7fadbd92d"
+    },
+    {
+      "path": "dist/.lilscript/public.json",
+      "bytes": 7257,
+      "sha256": "272ce3d6de8ffbff82ae5226192d29e5811f80d38930a4376a543d7ac8afe3d3"
+    },
+    {
+      "path": "dist/lilscript.manifest.json",
+      "bytes": 7173,
+      "sha256": "a553a5cc22172bccf6bf583b715e7b5f4cc8ceeb3b2f3c15578cdab9de52ef8c"
+    },
+    {
+      "path": "dist/to-hast.cjs",
+      "bytes": 18450,
+      "sha256": "67e31044bbb59d52a7ef98ba35463376abc1313e50f4653a55d4b351ca55cfc7"
+    },
+    {
+      "path": "dist/to-hast.closed.js",
+      "bytes": 18225,
+      "sha256": "5aa9d116faa295047c31d621ecc5d4c8de28ee784e4370e4b44e37ab0ad972f5"
+    },
+    {
+      "path": "dist/to-hast.d.ts",
+      "bytes": 4830,
+      "sha256": "bf19af2da52157fb81a3fc0383154e551f7405c58b8f94744554166764174e35"
+    },
+    {
+      "path": "dist/to-hast.esm.js",
+      "bytes": 18225,
+      "sha256": "5aa9d116faa295047c31d621ecc5d4c8de28ee784e4370e4b44e37ab0ad972f5"
+    },
+    {
+      "path": "dist/to-hast.raw.js",
+      "bytes": 18225,
+      "sha256": "5aa9d116faa295047c31d621ecc5d4c8de28ee784e4370e4b44e37ab0ad972f5"
+    },
+    {
+      "path": "dist/to-hast.umd.js",
+      "bytes": 18318,
+      "sha256": "2c005fc94639a5a8d8a1eecf1fe657dd0bbe2fa6a35fb8a955cc81ea48269df3"
+    }
+  ],
+  "scope": "Checked repository package; independent of npm publication. Main-entry objective comparisons have separate artifacts and timings."
+}

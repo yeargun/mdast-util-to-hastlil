@@ -1,0 +1,837 @@
+
+> @itslil/mdast-util-to-hast@13.2.2 test:types
+> tsc --noEmit
+
+TAP version 13
+# Subtest: blockquote
+    # Subtest: should transform `blockquote` to a `blockquote` element
+    ok 1 - should transform `blockquote` to a `blockquote` element
+      ---
+      duration_ms: 2.5567
+      ...
+    1..1
+ok 1 - blockquote
+  ---
+  duration_ms: 3.560071
+  ...
+# Subtest: break
+    # Subtest: should transform `break` to `br`
+    ok 1 - should transform `break` to `br`
+      ---
+      duration_ms: 0.486622
+      ...
+    # Subtest: should trim text after a `br` (\#1)
+    ok 2 - should trim text after a `br` (\#1)
+      ---
+      duration_ms: 0.348924
+      ...
+    # Subtest: should trim text after a `br` (\#2)
+    ok 3 - should trim text after a `br` (\#2)
+      ---
+      duration_ms: 0.415659
+      ...
+    # Subtest: should trim text after a `br` (\#3)
+    ok 4 - should trim text after a `br` (\#3)
+      ---
+      duration_ms: 0.41618
+      ...
+    1..4
+ok 2 - break
+  ---
+  duration_ms: 2.199181
+  ...
+# Subtest: code
+    # Subtest: should transform `code` to a `pre` element (\#1)
+    ok 1 - should transform `code` to a `pre` element (\#1)
+      ---
+      duration_ms: 0.412262
+      ...
+    # Subtest: should transform `code` to a `pre` element (\#2)
+    ok 2 - should transform `code` to a `pre` element (\#2)
+      ---
+      duration_ms: 0.343654
+      ...
+    # Subtest: should transform `code` to a `pre` element with language class
+    ok 3 - should transform `code` to a `pre` element with language class
+      ---
+      duration_ms: 0.497383
+      ...
+    # Subtest: should transform `lang` w/ spaces
+    ok 4 - should transform `lang` w/ spaces
+      ---
+      duration_ms: 0.377116
+      ...
+    # Subtest: should support `meta`
+    ok 5 - should support `meta`
+      ---
+      duration_ms: 0.247493
+      ...
+    # Subtest: should support tabs in code
+    ok 6 - should support tabs in code
+      ---
+      duration_ms: 0.250059
+      ...
+    1..6
+ok 3 - code
+  ---
+  duration_ms: 2.900916
+  ...
+# Subtest: toHast
+    # Subtest: should expose the public api
+    ok 1 - should expose the public api
+      ---
+      duration_ms: 0.413936
+      ...
+    # Subtest: should throw on non-nodes
+    ok 2 - should throw on non-nodes
+      ---
+      duration_ms: 0.382697
+      ...
+    # Subtest: should prefer `data.hName` to tag names
+    ok 3 - should prefer `data.hName` to tag names
+      ---
+      duration_ms: 0.243756
+      ...
+    # Subtest: should prefer `data.hChildren` to children
+    ok 4 - should prefer `data.hChildren` to children
+      ---
+      duration_ms: 1.164793
+      ...
+    # Subtest: should support `data.hProperties`
+    ok 5 - should support `data.hProperties`
+      ---
+      duration_ms: 0.372438
+      ...
+    # Subtest: should patch `position`s when given
+    ok 6 - should patch `position`s when given
+      ---
+      duration_ms: 0.310271
+      ...
+    # Subtest: should patch `position`s on `pre` and `code`
+    ok 7 - should patch `position`s on `pre` and `code`
+      ---
+      duration_ms: 0.222757
+      ...
+    # Subtest: should patch `position`s when given
+    ok 8 - should patch `position`s when given
+      ---
+      duration_ms: 0.183093
+      ...
+    # Subtest: should patch `position`s on `pre` and `code`
+    ok 9 - should patch `position`s on `pre` and `code`
+      ---
+      duration_ms: 0.243716
+      ...
+    # Subtest: should transform unknown texts to `text`
+    ok 10 - should transform unknown texts to `text`
+      ---
+      duration_ms: 0.135463
+      ...
+    # Subtest: should transform unknown parents to `div`
+    ok 11 - should transform unknown parents to `div`
+      ---
+      duration_ms: 0.158247
+      ...
+    # Subtest: should transform unknown voids to `div`
+    ok 12 - should transform unknown voids to `div`
+      ---
+      duration_ms: 0.142507
+      ...
+    # Subtest: should transform unknown nodes with `data.h*` properties
+    ok 13 - should transform unknown nodes with `data.h*` properties
+      ---
+      duration_ms: 0.20273
+      ...
+    # Subtest: should transform unknown nodes with `data.hChildren` only to `div`
+    ok 14 - should transform unknown nodes with `data.hChildren` only to `div`
+      ---
+      duration_ms: 0.149841
+      ...
+    # Subtest: should transform unknown nodes with `data.hProperties` only to a `element` node
+    ok 15 - should transform unknown nodes with `data.hProperties` only to a `element` node
+      ---
+      duration_ms: 0.159149
+      ...
+    # Subtest: should override default handlers
+    ok 16 - should override default handlers
+      ---
+      duration_ms: 0.264255
+      ...
+    # Subtest: should support files
+    ok 17 - should support files
+      ---
+      duration_ms: 0.537437
+      ...
+    # Subtest: should support unknown nodes by default
+    ok 18 - should support unknown nodes by default
+      ---
+      duration_ms: 0.360045
+      ...
+    # Subtest: should support `unknownHandler`
+    ok 19 - should support `unknownHandler`
+      ---
+      duration_ms: 0.241673
+      ...
+    # Subtest: should support `passThrough`
+    ok 20 - should support `passThrough`
+      ---
+      duration_ms: 0.245851
+      ...
+    1..20
+ok 4 - toHast
+  ---
+  duration_ms: 8.021721
+  ...
+# Subtest: definition
+    # Subtest: should ignore `definition`
+    ok 1 - should ignore `definition`
+      ---
+      duration_ms: 0.192149
+      ...
+    # Subtest: should prefer the first definition
+    ok 2 - should prefer the first definition
+      ---
+      duration_ms: 0.284563
+      ...
+    1..2
+ok 5 - definition
+  ---
+  duration_ms: 0.69883
+  ...
+# Subtest: delete
+    # Subtest: should transform `delete` to `del`
+    ok 1 - should transform `delete` to `del`
+      ---
+      duration_ms: 0.247744
+      ...
+    1..1
+ok 6 - delete
+  ---
+  duration_ms: 0.393787
+  ...
+# Subtest: emphasis
+    # Subtest: should transform `emphasis` to `em`
+    ok 1 - should transform `emphasis` to `em`
+      ---
+      duration_ms: 0.171953
+      ...
+    1..1
+ok 7 - emphasis
+  ---
+  duration_ms: 0.315211
+  ...
+# Subtest: footnoteDefinition
+    # Subtest: should ignore `footnoteDefinition`
+    ok 1 - should ignore `footnoteDefinition`
+      ---
+      duration_ms: 0.157075
+      ...
+    # Subtest: should support a `footnoteDefinition`
+    ok 2 - should support a `footnoteDefinition`
+      ---
+      duration_ms: 0.935383
+      ...
+    # Subtest: should use the first `footnoteDefinition` if multiple exist
+    ok 3 - should use the first `footnoteDefinition` if multiple exist
+      ---
+      duration_ms: 0.460482
+      ...
+    1..3
+ok 8 - footnoteDefinition
+  ---
+  duration_ms: 1.860095
+  ...
+# Subtest: footnoteReference
+    # Subtest: should render `footnoteReference`s
+    ok 1 - should render `footnoteReference`s
+      ---
+      duration_ms: 0.205805
+      ...
+    # Subtest: should render `footnoteReference`s (\#2)
+    ok 2 - should render `footnoteReference`s (\#2)
+      ---
+      duration_ms: 0.331842
+      ...
+    # Subtest: should not fail on non-string identifiers
+    ok 3 - should not fail on non-string identifiers
+      ---
+      duration_ms: 0.205055
+      ...
+    1..3
+ok 9 - footnoteReference
+  ---
+  duration_ms: 1.030922
+  ...
+# Subtest: footnote
+    # Subtest: should render `footnote`s (\#1)
+    ok 1 - should render `footnote`s (\#1)
+      ---
+      duration_ms: 1.401085
+      ...
+    # Subtest: should render footnotes in tables
+    ok 2 - should render footnotes in tables
+      ---
+      duration_ms: 10.507618
+      ...
+    # Subtest: should render footnotes in table cells
+    ok 3 - should render footnotes in table cells
+      ---
+      duration_ms: 1.859634
+      ...
+    # Subtest: should render reused and resursive footnotes
+    ok 4 - should render reused and resursive footnotes
+      ---
+      duration_ms: 2.665946
+      ...
+    # Subtest: should support `footnoteLabel`, `footnoteBackLabel`
+    ok 5 - should support `footnoteLabel`, `footnoteBackLabel`
+      ---
+      duration_ms: 1.253218
+      ...
+    # Subtest: should support `footnoteBackLabel` as a function
+    ok 6 - should support `footnoteBackLabel` as a function
+      ---
+      duration_ms: 1.127493
+      ...
+    # Subtest: should support `footnoteBackContent` as `string`
+    ok 7 - should support `footnoteBackContent` as `string`
+      ---
+      duration_ms: 0.981749
+      ...
+    # Subtest: should support `footnoteBackContent` as a function`
+    ok 8 - should support `footnoteBackContent` as a function`
+      ---
+      duration_ms: 1.082288
+      ...
+    # Subtest: should support an empty `clobberPrefix`
+    ok 9 - should support an empty `clobberPrefix`
+      ---
+      duration_ms: 0.998952
+      ...
+    # Subtest: should support a `footnoteLabelTagName`
+    ok 10 - should support a `footnoteLabelTagName`
+      ---
+      duration_ms: 1.083971
+      ...
+    # Subtest: should support a `footnoteLabelProperties`
+    ok 11 - should support a `footnoteLabelProperties`
+      ---
+      duration_ms: 0.9284
+      ...
+    # Subtest: should support funky footnote identifiers
+    ok 12 - should support funky footnote identifiers
+      ---
+      duration_ms: 1.35587
+      ...
+    1..12
+ok 10 - footnote
+  ---
+  duration_ms: 26.297595
+  ...
+# Subtest: heading
+    # Subtest: should transform `heading` to a `h[1-6]` element
+    ok 1 - should transform `heading` to a `h[1-6]` element
+      ---
+      duration_ms: 0.299311
+      ...
+    1..1
+ok 11 - heading
+  ---
+  duration_ms: 0.467896
+  ...
+# Subtest: HTML
+    # Subtest: should ignore `html`
+    ok 1 - should ignore `html`
+      ---
+      duration_ms: 0.215524
+      ...
+    # Subtest: should transform `html` to `raw` if `allowDangerousHtml` is given
+    ok 2 - should transform `html` to `raw` if `allowDangerousHtml` is given
+      ---
+      duration_ms: 0.171722
+      ...
+    1..2
+ok 12 - HTML
+  ---
+  duration_ms: 0.647854
+  ...
+# Subtest: imageReference
+    # Subtest: should fall back on `imageReference`s without definition
+    ok 1 - should fall back on `imageReference`s without definition
+      ---
+      duration_ms: 0.314489
+      ...
+    # Subtest: should fall back on full `imageReference`s
+    ok 2 - should fall back on full `imageReference`s
+      ---
+      duration_ms: 0.156453
+      ...
+    # Subtest: should fall back on collapsed `imageReference`s
+    ok 3 - should fall back on collapsed `imageReference`s
+      ---
+      duration_ms: 0.193152
+      ...
+    # Subtest: should transform `imageReference`s to `img`s (1)
+    ok 4 - should transform `imageReference`s to `img`s (1)
+      ---
+      duration_ms: 0.203341
+      ...
+    # Subtest: should transform `imageReference`s with an empty defined url to `img`s
+    ok 5 - should transform `imageReference`s with an empty defined url to `img`s
+      ---
+      duration_ms: 0.165029
+      ...
+    # Subtest: should fall back on the label on a full `imageReference` (GH-22)
+    ok 6 - should fall back on the label on a full `imageReference` (GH-22)
+      ---
+      duration_ms: 0.142798
+      ...
+    1..6
+ok 13 - imageReference
+  ---
+  duration_ms: 2.788485
+  ...
+# Subtest: image
+    # Subtest: should transform `image` to `img`
+    ok 1 - should transform `image` to `img`
+      ---
+      duration_ms: 0.205114
+      ...
+    # Subtest: should transform `image` to `img` (missing `title`)
+    ok 2 - should transform `image` to `img` (missing `title`)
+      ---
+      duration_ms: 0.189866
+      ...
+    1..2
+ok 14 - image
+  ---
+  duration_ms: 0.602108
+  ...
+# Subtest: inlineCode
+    # Subtest: should transform `inlineCode` to a `code` element
+    ok 1 - should transform `inlineCode` to a `code` element
+      ---
+      duration_ms: 0.185588
+      ...
+    # Subtest: should support tabs in inline code
+    ok 2 - should support tabs in inline code
+      ---
+      duration_ms: 0.132208
+      ...
+    # Subtest: should change eols to spaces in inline code
+    ok 3 - should change eols to spaces in inline code
+      ---
+      duration_ms: 0.20298
+      ...
+    1..3
+ok 15 - inlineCode
+  ---
+  duration_ms: 0.867665
+  ...
+# Subtest: linkReference
+    # Subtest: should fall back on `linkReference`s without definition
+    ok 1 - should fall back on `linkReference`s without definition
+      ---
+      duration_ms: 0.184336
+      ...
+    # Subtest: should fall back on full `linkReference`s
+    ok 2 - should fall back on full `linkReference`s
+      ---
+      duration_ms: 0.146053
+      ...
+    # Subtest: should fall back on collapsed `linkReference`s
+    ok 3 - should fall back on collapsed `linkReference`s
+      ---
+      duration_ms: 0.173656
+      ...
+    # Subtest: should fall back on the label on a full `linkReference` (GH-22)
+    ok 4 - should fall back on the label on a full `linkReference` (GH-22)
+      ---
+      duration_ms: 0.156714
+      ...
+    # Subtest: should support link references with non-text content
+    ok 5 - should support link references with non-text content
+      ---
+      duration_ms: 0.154469
+      ...
+    # Subtest: should transform `linkReference`s to `a`s
+    ok 6 - should transform `linkReference`s to `a`s
+      ---
+      duration_ms: 0.188103
+      ...
+    # Subtest: should transform `linkReference`s with an empty defined url to `a`s
+    ok 7 - should transform `linkReference`s with an empty defined url to `a`s
+      ---
+      duration_ms: 0.202099
+      ...
+    1..7
+ok 16 - linkReference
+  ---
+  duration_ms: 1.767492
+  ...
+# Subtest: link
+    # Subtest: should transform `link` to `a`
+    ok 1 - should transform `link` to `a`
+      ---
+      duration_ms: 0.200025
+      ...
+    # Subtest: should transform `link` to `a` (w/o `title`)
+    ok 2 - should transform `link` to `a` (w/o `title`)
+      ---
+      duration_ms: 0.166733
+      ...
+    # Subtest: should correctly decode/encode urls
+    ok 3 - should correctly decode/encode urls
+      ---
+      duration_ms: 0.259967
+      ...
+    # Subtest: should correctly decode/encode dangerous characters
+    ok 4 - should correctly decode/encode dangerous characters
+      ---
+      duration_ms: 0.226474
+      ...
+    1..4
+ok 17 - link
+  ---
+  duration_ms: 1.213083
+  ...
+# Subtest: listItem
+    # Subtest: should transform `listItem`s to a `li` element
+    ok 1 - should transform `listItem`s to a `li` element
+      ---
+      duration_ms: 0.413405
+      ...
+    # Subtest: should transform a spread `listItem`s to a `li` element
+    ok 2 - should transform a spread `listItem`s to a `li` element
+      ---
+      duration_ms: 0.218189
+      ...
+    # Subtest: should detect that an item is spread, even when not explicitly set
+    ok 3 - should detect that an item is spread, even when not explicitly set
+      ---
+      duration_ms: 0.164699
+      ...
+    # Subtest: should support checkboxes in `listItem`s (`true`, tight item)
+    ok 4 - should support checkboxes in `listItem`s (`true`, tight item)
+      ---
+      duration_ms: 0.190497
+      ...
+    # Subtest: should support checkboxes in `listItem`s (`false`, loose item)
+    ok 5 - should support checkboxes in `listItem`s (`false`, loose item)
+      ---
+      duration_ms: 0.193151
+      ...
+    # Subtest: should support checkboxes in `listItem`s w/o paragraph
+    ok 6 - should support checkboxes in `listItem`s w/o paragraph
+      ---
+      duration_ms: 0.20826
+      ...
+    # Subtest: should support checkboxes in `listItem`s that don’t start with paragraphs
+    ok 7 - should support checkboxes in `listItem`s that don’t start with paragraphs
+      ---
+      duration_ms: 0.260188
+      ...
+    # Subtest: should support `listItem`s without children
+    ok 8 - should support `listItem`s without children
+      ---
+      duration_ms: 0.12812
+      ...
+    # Subtest: should support checkboxes in `listItem`s without children
+    ok 9 - should support checkboxes in `listItem`s without children
+      ---
+      duration_ms: 0.154128
+      ...
+    # Subtest: should support lists in `listItem`s
+    ok 10 - should support lists in `listItem`s
+      ---
+      duration_ms: 0.260378
+      ...
+    1..10
+ok 18 - listItem
+  ---
+  duration_ms: 2.875789
+  ...
+# Subtest: list
+    # Subtest: should transform ordered lists to `ol`
+    ok 1 - should transform ordered lists to `ol`
+      ---
+      duration_ms: 0.173315
+      ...
+    # Subtest: should transform unordered lists to `ul`
+    ok 2 - should transform unordered lists to `ul`
+      ---
+      duration_ms: 0.213821
+      ...
+    # Subtest: should identify task list items in unordered lists
+    ok 3 - should identify task list items in unordered lists
+      ---
+      duration_ms: 0.254778
+      ...
+    # Subtest: should support `start` in ordered lists
+    ok 4 - should support `start` in ordered lists
+      ---
+      duration_ms: 0.187622
+      ...
+    1..4
+ok 19 - list
+  ---
+  duration_ms: 1.171415
+  ...
+# Subtest: paragraph
+    # Subtest: should transform `paragraph` to a `p` element
+    ok 1 - should transform `paragraph` to a `p` element
+      ---
+      duration_ms: 0.139953
+      ...
+    1..1
+ok 20 - paragraph
+  ---
+  duration_ms: 0.278191
+  ...
+# Subtest: root
+    # Subtest: should map `root`s
+    ok 1 - should map `root`s
+      ---
+      duration_ms: 0.125575
+      ...
+    # Subtest: should transform root nodes w/ `hName`
+    ok 2 - should transform root nodes w/ `hName`
+      ---
+      duration_ms: 0.147957
+      ...
+    # Subtest: should transform root nodes w/ `hName`, `hProperties`
+    ok 3 - should transform root nodes w/ `hName`, `hProperties`
+      ---
+      duration_ms: 0.189274
+      ...
+    # Subtest: should transform root nodes w/ `hName`, `hChildren`
+    ok 4 - should transform root nodes w/ `hName`, `hChildren`
+      ---
+      duration_ms: 0.150372
+      ...
+    1..4
+ok 21 - root
+  ---
+  duration_ms: 0.984935
+  ...
+# Subtest: strong
+    # Subtest: should transform `strong` to `strong`
+    ok 1 - should transform `strong` to `strong`
+      ---
+      duration_ms: 0.144582
+      ...
+    1..1
+ok 22 - strong
+  ---
+  duration_ms: 0.325771
+  ...
+# Subtest: table
+    # Subtest: should transform `table`
+    ok 1 - should transform `table`
+      ---
+      duration_ms: 0.348563
+      ...
+    # Subtest: should not add a `tbody` if w/o second row
+    ok 2 - should not add a `tbody` if w/o second row
+      ---
+      duration_ms: 0.183805
+      ...
+    # Subtest: should handle a table node w/o rows
+    ok 3 - should handle a table node w/o rows
+      ---
+      duration_ms: 0.127388
+      ...
+    # Subtest: should handle a table row node w/ cells
+    ok 4 - should handle a table row node w/ cells
+      ---
+      duration_ms: 0.172614
+      ...
+    # Subtest: should handle a table row node w/o cells
+    ok 5 - should handle a table row node w/o cells
+      ---
+      duration_ms: 0.125756
+      ...
+    # Subtest: should handle a table cell node w/ children
+    ok 6 - should handle a table cell node w/ children
+      ---
+      duration_ms: 0.22437
+      ...
+    # Subtest: should handle a table cell node w/o children
+    ok 7 - should handle a table cell node w/o children
+      ---
+      duration_ms: 0.166222
+      ...
+    1..7
+ok 23 - table
+  ---
+  duration_ms: 1.967557
+  ...
+# Subtest: text
+    # Subtest: should map `text`s
+    ok 1 - should map `text`s
+      ---
+      duration_ms: 0.126888
+      ...
+    # Subtest: should trim spaces and tabs around eols
+    ok 2 - should trim spaces and tabs around eols
+      ---
+      duration_ms: 0.125595
+      ...
+    # Subtest: should transform text nodes w/ `hName` to an `element`
+    ok 3 - should transform text nodes w/ `hName` to an `element`
+      ---
+      duration_ms: 0.134823
+      ...
+    # Subtest: should ignore `hProperties` on text nodes w/o `hName`
+    ok 4 - should ignore `hProperties` on text nodes w/o `hName`
+      ---
+      duration_ms: 0.115767
+      ...
+    # Subtest: should transform text nodes w/ `hProperties` and `hName` to an `element`
+    ok 5 - should transform text nodes w/ `hProperties` and `hName` to an `element`
+      ---
+      duration_ms: 0.237966
+      ...
+    # Subtest: should not transform text nodes w/ `hChildren` w/o `hName` to an `element`
+    ok 6 - should not transform text nodes w/ `hChildren` w/o `hName` to an `element`
+      ---
+      duration_ms: 0.123752
+      ...
+    # Subtest: should transform text nodes w/ `hChildren` and `hName` to an `element`
+    ok 7 - should transform text nodes w/ `hChildren` and `hName` to an `element`
+      ---
+      duration_ms: 0.125105
+      ...
+    1..7
+ok 24 - text
+  ---
+  duration_ms: 1.495162
+  ...
+# Subtest: thematicBreak
+    # Subtest: should transform `thematicBreak` to `hr`
+    ok 1 - should transform `thematicBreak` to `hr`
+      ---
+      duration_ms: 0.13898
+      ...
+    1..1
+ok 25 - thematicBreak
+  ---
+  duration_ms: 0.279164
+  ...
+# Subtest: toml
+    # Subtest: should ignore `toml`
+    ok 1 - should ignore `toml`
+      ---
+      duration_ms: 0.164628
+      ...
+    1..1
+ok 26 - toml
+  ---
+  duration_ms: 0.306284
+  ...
+# Subtest: yaml
+    # Subtest: should ignore `yaml`
+    ok 1 - should ignore `yaml`
+      ---
+      duration_ms: 0.118171
+      ...
+    1..1
+ok 27 - yaml
+  ---
+  duration_ms: 0.251091
+  ...
+# Subtest: three independently targeted builds have current artifact and config hashes
+ok 28 - three independently targeted builds have current artifact and config hashes
+  ---
+  duration_ms: 4.265933
+  ...
+# Subtest: public comparison describes current versus original and distinguishes build stages
+ok 29 - public comparison describes current versus original and distinguishes build stages
+  ---
+  duration_ms: 0.745237
+  ...
+# Subtest: built Pages artifact contains the current data and measured downloads
+ok 30 - built Pages artifact contains the current data and measured downloads
+  ---
+  duration_ms: 0.862346
+  ...
+# Subtest: hProperties copy as upstream's, without a native structuredClone (the polyfill)
+ok 31 - hProperties copy as upstream's, without a native structuredClone (the polyfill)
+  ---
+  duration_ms: 74.143203
+  ...
+# Subtest: hProperties copy as upstream's, with the native structuredClone
+ok 32 - hProperties copy as upstream's, with the native structuredClone
+  ---
+  duration_ms: 67.276292
+  ...
+# Subtest: @itslil/mdast-util-to-hast library
+    # Subtest: exports the upstream public API
+    ok 1 - exports the upstream public API
+      ---
+      duration_ms: 1.474042
+      ...
+    # Subtest: preserves numeric footnote helper arguments like upstream
+    ok 2 - preserves numeric footnote helper arguments like upstream
+      ---
+      duration_ms: 0.481603
+      ...
+    # Subtest: keeps pinned option and tree keys in the library artifact
+    ok 3 - keeps pinned option and tree keys in the library artifact
+      ---
+      duration_ms: 0.530444
+      ...
+    # Subtest: maps a mdast fixture to hast elements
+    ok 4 - maps a mdast fixture to hast elements
+      ---
+      duration_ms: 1.083981
+      ...
+    # Subtest: skips html when allowDangerousHtml is off
+    ok 5 - skips html when allowDangerousHtml is off
+      ---
+      duration_ms: 0.201468
+      ...
+    1..5
+ok 33 - @itslil/mdast-util-to-hast library
+  ---
+  duration_ms: 5.148216
+  type: 'suite'
+  ...
+# Subtest: @itslil/mdast-util-to-hast closed lane
+    # Subtest: exists and still converts a tree
+    ok 1 - exists and still converts a tree
+      ---
+      duration_ms: 9.268046
+      ...
+    1..1
+ok 34 - @itslil/mdast-util-to-hast closed lane
+  ---
+  duration_ms: 9.475024
+  type: 'suite'
+  ...
+# Subtest: @itslil/mdast-util-to-hast CommonJS and browser builds
+    # Subtest: require() returns the ESM's exports, converting alike
+    ok 1 - require() returns the ESM's exports, converting alike
+      ---
+      duration_ms: 4.9312
+      ...
+    # Subtest: the browser script sets the global toHast and nothing else
+    ok 2 - the browser script sets the global toHast and nothing else
+      ---
+      duration_ms: 4.613705
+      ...
+    1..2
+ok 35 - @itslil/mdast-util-to-hast CommonJS and browser builds
+  ---
+  duration_ms: 9.873019
+  type: 'suite'
+  ...
+1..35
+# tests 155
+# suites 3
+# pass 155
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 706.916119

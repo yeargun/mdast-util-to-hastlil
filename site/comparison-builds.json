@@ -16,9 +16,9 @@
       "library": "mdast-util-to-hastlil",
       "objective": "raw",
       "command": [
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/bin/lilscript",
         "--config",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-raw.toml",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/configs/mdast-util-to-hastlil-raw.toml",
         "--target",
         "js-module",
         "--mode",
@@ -26,29 +26,29 @@
         "--jobs",
         "1",
         "--out-dir",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/raw",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/artifacts/mdast-util-to-hastlil/raw",
         "--explain",
         "json",
         "--cache",
         "off",
         "--logical-work",
-        "2000000000"
+        "8000000000"
       ],
-      "wallSeconds": 15.945053780000308,
+      "wallSeconds": 89.56511131599837,
       "returncode": 0,
       "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
-      "configSha256": "f03e96c0269beb83d6faf1b0251d26dab67120b9a42b7d98822f6a9d9cd657ae",
-      "measuredAt": "2026-10-02T22:36:12.823613+00:00",
-      "outputSha256": "83b85128179e9c42b4374c1c8cc7a8bcfde9db7a259bdb4657a1d08ddccb5ca0",
-      "raw": 13458
+      "configSha256": "5564cbc82a0c82ad3eaeb4f683960a949fbc90389cd31355eadb38328eae595c",
+      "measuredAt": "2026-10-03T13:41:53.347291+00:00",
+      "outputSha256": "4a21cb64d5983fd59a1b2f98aa8a431945dc42aff71e46648041400042a88b76",
+      "raw": 17373
     },
     {
       "library": "mdast-util-to-hastlil",
       "objective": "gzip",
       "command": [
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/bin/lilscript",
         "--config",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-gzip.toml",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/configs/mdast-util-to-hastlil-gzip.toml",
         "--target",
         "js-module",
         "--mode",
@@ -56,29 +56,29 @@
         "--jobs",
         "1",
         "--out-dir",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/gzip",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/artifacts/mdast-util-to-hastlil/gzip",
         "--explain",
         "json",
         "--cache",
         "off",
         "--logical-work",
-        "2000000000"
+        "8000000000"
       ],
-      "wallSeconds": 13.53950619600073,
+      "wallSeconds": 57.14282882200496,
       "returncode": 0,
       "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
-      "configSha256": "031c63747f9b2a51263f106a640f9d57e0a484927d8ee9e2edd94c86b0b13819",
-      "measuredAt": "2026-10-02T22:36:26.368569+00:00",
-      "outputSha256": "d815e28097c56ba75f6bbdf6a69bf9ea367a8ad99f887315f902e70883050688",
-      "raw": 14406
+      "configSha256": "eb9fe9be82c99fd9c14e2c9bd5ec8e6a039a9b502a29f21ce081d6413b7d58f9",
+      "measuredAt": "2026-10-03T13:42:50.516764+00:00",
+      "outputSha256": "86d32adeaa52ef29118616476b3f153de601bd9bb89e85210e9ebae562bbef7b",
+      "raw": 18116
     },
     {
       "library": "mdast-util-to-hastlil",
       "objective": "brotli",
       "command": [
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/bin/lilscript",
         "--config",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-brotli.toml",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/configs/mdast-util-to-hastlil-brotli.toml",
         "--target",
         "js-module",
         "--mode",
@@ -86,29 +86,29 @@
         "--jobs",
         "1",
         "--out-dir",
-        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/brotli",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/artifacts/mdast-util-to-hastlil/brotli",
         "--explain",
         "json",
         "--cache",
         "off",
         "--logical-work",
-        "2000000000"
+        "8000000000"
       ],
-      "wallSeconds": 28.16636952799672,
+      "wallSeconds": 159.61651305299893,
       "returncode": 0,
       "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
-      "configSha256": "b88aadb3b819f41733572d3a05e9ca1d03af35052db39e26c674de6b6e0ea22b",
-      "measuredAt": "2026-10-02T22:36:54.539246+00:00",
-      "outputSha256": "2acde280e93895ff996f803ce02c0b9bcc42859e9dfbe765b379d6a159f18c2d",
-      "raw": 14639
+      "configSha256": "b56dc19dde637fb2a298bc16f5899cea1bed75d383a84c7d4abf93686fba5b06",
+      "measuredAt": "2026-10-03T13:45:30.138503+00:00",
+      "outputSha256": "37ffcb47820dfff07d2bb3f2c743b78b59332e037c20abd0bdef967475c9cff4",
+      "raw": 18174
     }
   ],
   "upstream": {
     "name": "mdast-util-to-hastlil",
     "package": "mdast-util-to-hast",
     "version": "13.2.1",
-    "resolveDir": "/home/azureuser/mdast-util-to-hastlil",
-    "output": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil",
+    "resolveDir": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil",
+    "output": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil",
     "entry": "export {defaultFootnoteBackContent,defaultFootnoteBackLabel,defaultHandlers,toHast} from \"mdast-util-to-hast\";",
     "external": [],
     "sharedExports": [
@@ -131,23 +131,24 @@
       "target": "es2020",
       "defines": {
         "process.env.NODE_ENV": "production"
-      }
+      },
+      "css": "excluded; measured JavaScript only"
     },
     "minifiers": [
       {
         "tool": "Terser",
         "version": "5.51.2",
         "esbuild": "0.28.1",
-        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/terser.mjs",
-        "sha256": "9e8f4b17637a246caead4975d9481d096bba4b7a4bcbfb9d30a59c54c561845b",
-        "raw": 16709,
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/terser.mjs",
+        "sha256": "e000431d102d112511a6faada43fdcb3a3eef22a4d8c4960e3319c13e3f5711e",
+        "raw": 16904,
         "imports": [],
-        "wallSeconds": 0.44958391699999994,
+        "wallSeconds": 0.7779409869999999,
         "command": [
           "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream.mjs",
           "child",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/job.json",
           "Terser"
         ]
       },
@@ -155,16 +156,16 @@
         "tool": "esbuild",
         "version": "0.28.1",
         "esbuild": "0.28.1",
-        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/esbuild.mjs",
-        "sha256": "488562853166d60b0a6d81f37cbc47e0b365550ce4021a87aedbf209e848aa96",
-        "raw": 17289,
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/esbuild.mjs",
+        "sha256": "68d53a0e96754de6ab3d6d6962dfae7d8dc16a4b895ad551a9a309fd622b9a55",
+        "raw": 17489,
         "imports": [],
-        "wallSeconds": 0.06588857800000006,
+        "wallSeconds": 0.11455103699999995,
         "command": [
           "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream.mjs",
           "child",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/job.json",
           "esbuild"
         ]
       },
@@ -172,16 +173,16 @@
         "tool": "Oxc",
         "version": "via Vite 8.2.1",
         "esbuild": "0.28.1",
-        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/oxc.mjs",
-        "sha256": "a509cffba99116f0c1b1d4a75d277b0d743dd729cc6a86a41031804a547067b3",
-        "raw": 16729,
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/oxc.mjs",
+        "sha256": "9bbe30b13e6867c2a811b8d4aece3609898c001dfd28cf725eaf86871aa0d694",
+        "raw": 16927,
         "imports": [],
-        "wallSeconds": 0.18429803400000014,
+        "wallSeconds": 0.3437777710000001,
         "command": [
           "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream.mjs",
           "child",
-          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/upstream/mdast-util-to-hastlil/job.json",
           "Oxc"
         ]
       }
@@ -197,7 +198,7 @@
     ],
     "modules": [
       {
-        "path": "/home/azureuser/mdast-util-to-hastlil/src/entry.lil",
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/entry.lil",
         "bytes": 425,
         "sha256": "1158713d6d03877bcd4ad8c93c6118c9580a4fc8bc4ab7620fe6b9ccb4ef3e58",
         "dependencies": [
@@ -206,18 +207,27 @@
         "dynamic_dependencies": []
       },
       {
-        "path": "/home/azureuser/mdast-util-to-hastlil/src/convert.lil",
-        "bytes": 31726,
-        "sha256": "cdf02a2890cad21a66342cb6c3d2cb6b4f30da68cb25d1fd55eda19134f8b2f4",
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/convert.lil",
+        "bytes": 31949,
+        "sha256": "51067d670f95b55b7072a1cbe1beca7d8d8c91c7f882e6271056f1e4519342af",
         "dependencies": [
           2
         ],
         "dynamic_dependencies": []
       },
       {
-        "path": "/home/azureuser/mdast-util-to-hastlil/src/types.lil",
-        "bytes": 10261,
-        "sha256": "8cedef100ce0b759088a08c4ecf6c9e63dde6ee699cac217fd585ac1add5ff7d",
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/types.lil",
+        "bytes": 10183,
+        "sha256": "6323ae0c126df16614bf8a6473e3256058a0485abc22879fe2a0f6554c717aea",
+        "dependencies": [
+          3
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/structured-clone.lil",
+        "bytes": 11201,
+        "sha256": "a5dfbee9c82ac59ccbda7fafd55217d0dd90cbf0d3d13a9818e3a211fec8a259",
         "dependencies": [],
         "dynamic_dependencies": []
       }
@@ -227,25 +237,50 @@
   },
   "validation": {
     "checks": 1980,
-    "objectives": [
+    "runs": [
       {
         "objective": "raw",
+        "suite": "differential",
         "checks": 660,
-        "suite": "differential"
+        "command": [
+          "node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/differential.mjs",
+          "validation/raw",
+          "mdast-util-to-hastlil"
+        ],
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/validation/raw/mdast-util-to-hastlil/dist/index.mjs",
+        "ok": true
       },
       {
         "objective": "gzip",
+        "suite": "differential",
         "checks": 660,
-        "suite": "differential"
+        "command": [
+          "node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/differential.mjs",
+          "validation/gzip",
+          "mdast-util-to-hastlil"
+        ],
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/validation/gzip/mdast-util-to-hastlil/dist/index.mjs",
+        "ok": true
       },
       {
         "objective": "brotli",
+        "suite": "differential",
         "checks": 660,
-        "suite": "differential"
+        "command": [
+          "node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/differential.mjs",
+          "validation/brotli",
+          "mdast-util-to-hastlil"
+        ],
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/validation/brotli/mdast-util-to-hastlil/dist/index.mjs",
+        "ok": true
       }
     ],
-    "scope": "Main ESM entry; selected corpora and API checks, not all package formats or complete upstream equivalence."
+    "ok": true,
+    "scope": "Current independent main-entry builds; package-format tests are recorded separately."
   },
-  "workLimit": 2000000000,
+  "workLimit": 8000000000,
   "timingScope": "One sequential fresh-output build per objective/minifier. Upstream timing is ESM bundling and minification, not original-repository source compilation."
 }

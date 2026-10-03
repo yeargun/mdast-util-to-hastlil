@@ -33,3 +33,5 @@ Until the 2026-09-24 release the CommonJS and browser files were esbuild reprint
 | **closed** | `lilscript.closed.toml` · `--target js-module` | the same source at a lower effort level with no candidate search. This compiler renames no properties, so `extern class` keys keep their names in both lanes. ESM export names stay so the lane is testable. |
 
 You publish the library lane. `dist/to-hast.closed.js` is diagnostic only.
+
+[Download the checked repository package](https://yeargun.github.io/mdast-util-to-hastlil/downloads/package.tgz) · [Package files, hashes and validation](https://yeargun.github.io/mdast-util-to-hastlil/package-build.json). npm publication is independent.

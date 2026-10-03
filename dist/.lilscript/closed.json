@@ -1,0 +1,145 @@
+{
+  "version": 3,
+  "codec": "brotli",
+  "outputs": [
+    {
+      "mode": "single",
+      "format": "esm",
+      "entries": [
+        {
+          "name": "index",
+          "file": "to-hast.closed.js",
+          "dynamic": false,
+          "closure": [
+            "to-hast.closed.js"
+          ],
+          "row": 5441,
+          "raw_row": 18225
+        }
+      ],
+      "files": [
+        {
+          "file": "to-hast.closed.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "index"
+          ],
+          "modules": [
+            "entry.lil",
+            "convert.lil",
+            "types.lil",
+            "structured-clone.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 18225,
+          "codec_bytes": 5441,
+          "sha256": "5aa9d116faa295047c31d621ecc5d4c8de28ee784e4370e4b44e37ab0ad972f5"
+        }
+      ],
+      "side_effects": [
+        "to-hast.closed.js"
+      ],
+      "codec_total": 5441,
+      "rows_total": 5441,
+      "setters": 0,
+      "output": "primary",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        19,
+        59,
+        174,
+        119,
+        12,
+        128,
+        117,
+        44,
+        102,
+        180,
+        248,
+        203,
+        229,
+        208,
+        115,
+        131,
+        187,
+        240,
+        91,
+        80,
+        115,
+        4,
+        13,
+        200,
+        85,
+        164,
+        255,
+        248,
+        126,
+        157,
+        100,
+        248
+      ]
+    }
+  ],
+  "source_sha256": "e89df72b18d7ae6472981d8aabfceb7004a6b85fc01eb31ad06596705f7c7bab",
+  "inputs": {
+    "root": 0,
+    "entries": [
+      {
+        "name": "index",
+        "module": 0
+      }
+    ],
+    "modules": [
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/entry.lil",
+        "bytes": 425,
+        "sha256": "1158713d6d03877bcd4ad8c93c6118c9580a4fc8bc4ab7620fe6b9ccb4ef3e58",
+        "dependencies": [
+          1
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/convert.lil",
+        "bytes": 31949,
+        "sha256": "51067d670f95b55b7072a1cbe1beca7d8d8c91c7f882e6271056f1e4519342af",
+        "dependencies": [
+          2
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/types.lil",
+        "bytes": 10183,
+        "sha256": "6323ae0c126df16614bf8a6473e3256058a0485abc22879fe2a0f6554c717aea",
+        "dependencies": [
+          3
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/structured-clone.lil",
+        "bytes": 11201,
+        "sha256": "a5dfbee9c82ac59ccbda7fafd55217d0dd90cbf0d3d13a9818e3a211fec8a259",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      }
+    ],
+    "host_modules": [],
+    "host_reserved": []
+  }
+}

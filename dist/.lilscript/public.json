@@ -1,0 +1,340 @@
+{
+  "version": 5,
+  "source_sha256": "155317a9ab4805ec86bf9566689d66e9bfc97dfae463be0951cbd4c2dcff0329",
+  "inputs": {
+    "root": 0,
+    "entries": [
+      {
+        "name": "browser",
+        "module": 0
+      },
+      {
+        "name": "index",
+        "module": 1
+      }
+    ],
+    "modules": [
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/browser.lil",
+        "bytes": 76,
+        "sha256": "fe095bb8cba9bbd4b1a89abe816bbceff060ac4edcb7dcc954de7ed1560619c8",
+        "dependencies": [
+          1
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/entry.lil",
+        "bytes": 425,
+        "sha256": "1158713d6d03877bcd4ad8c93c6118c9580a4fc8bc4ab7620fe6b9ccb4ef3e58",
+        "dependencies": [
+          2
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/convert.lil",
+        "bytes": 31949,
+        "sha256": "51067d670f95b55b7072a1cbe1beca7d8d8c91c7f882e6271056f1e4519342af",
+        "dependencies": [
+          3
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/types.lil",
+        "bytes": 10183,
+        "sha256": "6323ae0c126df16614bf8a6473e3256058a0485abc22879fe2a0f6554c717aea",
+        "dependencies": [
+          4
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-site-refresh/ports/mdast-util-to-hastlil/src/structured-clone.lil",
+        "bytes": 11201,
+        "sha256": "a5dfbee9c82ac59ccbda7fafd55217d0dd90cbf0d3d13a9818e3a211fec8a259",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      }
+    ],
+    "host_modules": [],
+    "host_reserved": []
+  },
+  "outputs": [
+    {
+      "mode": "single",
+      "format": "esm",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-hast.esm.js",
+          "dynamic": false,
+          "closure": [
+            "to-hast.esm.js"
+          ],
+          "row": 5441,
+          "raw_row": 18225
+        }
+      ],
+      "files": [
+        {
+          "file": "to-hast.esm.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "browser.lil",
+            "entry.lil",
+            "convert.lil",
+            "types.lil",
+            "structured-clone.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 18225,
+          "codec_bytes": 5441,
+          "sha256": "5aa9d116faa295047c31d621ecc5d4c8de28ee784e4370e4b44e37ab0ad972f5"
+        }
+      ],
+      "side_effects": [
+        "to-hast.esm.js"
+      ],
+      "codec_total": 5441,
+      "rows_total": 5441,
+      "setters": 0,
+      "output": "primary",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        78,
+        28,
+        210,
+        105,
+        70,
+        218,
+        33,
+        110,
+        72,
+        39,
+        134,
+        126,
+        119,
+        126,
+        68,
+        7,
+        253,
+        251,
+        32,
+        3,
+        248,
+        243,
+        123,
+        193,
+        21,
+        219,
+        189,
+        231,
+        42,
+        67,
+        228,
+        37
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "iife",
+      "entries": [
+        {
+          "name": "browser",
+          "file": "to-hast.umd.js",
+          "dynamic": false,
+          "closure": [
+            "to-hast.umd.js"
+          ],
+          "row": 5496,
+          "raw_row": 18318
+        }
+      ],
+      "files": [
+        {
+          "file": "to-hast.umd.js",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "browser"
+          ],
+          "modules": [
+            "entry.lil",
+            "convert.lil",
+            "types.lil",
+            "structured-clone.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 18318,
+          "codec_bytes": 5496,
+          "sha256": "2c005fc94639a5a8d8a1eecf1fe657dd0bbe2fa6a35fb8a955cc81ea48269df3"
+        }
+      ],
+      "side_effects": [
+        "to-hast.umd.js"
+      ],
+      "codec_total": 5496,
+      "rows_total": 5496,
+      "setters": 0,
+      "output": "browser",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        122,
+        61,
+        4,
+        98,
+        72,
+        240,
+        85,
+        219,
+        73,
+        77,
+        153,
+        138,
+        169,
+        83,
+        82,
+        172,
+        226,
+        218,
+        41,
+        55,
+        213,
+        86,
+        111,
+        159,
+        31,
+        145,
+        234,
+        236,
+        190,
+        184,
+        205,
+        138
+      ]
+    },
+    {
+      "mode": "single",
+      "format": "cjs",
+      "entries": [
+        {
+          "name": "index",
+          "file": "to-hast.cjs",
+          "dynamic": false,
+          "closure": [
+            "to-hast.cjs"
+          ],
+          "row": 5492,
+          "raw_row": 18450
+        }
+      ],
+      "files": [
+        {
+          "file": "to-hast.cjs",
+          "role": "entry",
+          "source_map_for": null,
+          "label": [
+            "index"
+          ],
+          "modules": [
+            "entry.lil",
+            "convert.lil",
+            "types.lil",
+            "structured-clone.lil"
+          ],
+          "anchored": true,
+          "imports": [],
+          "dynamic_imports": [],
+          "bytes": 18450,
+          "codec_bytes": 5492,
+          "sha256": "67e31044bbb59d52a7ef98ba35463376abc1313e50f4653a55d4b351ca55cfc7"
+        }
+      ],
+      "side_effects": [
+        "to-hast.cjs"
+      ],
+      "codec_total": 5492,
+      "rows_total": 5492,
+      "setters": 0,
+      "output": "cjs",
+      "codec": "brotli",
+      "codec_settings": {
+        "brotli": {
+          "quality": 11,
+          "window": 22,
+          "mode": "generic"
+        },
+        "gzip": {
+          "level": 9,
+          "window": 15
+        }
+      },
+      "policy_fingerprint": [
+        159,
+        124,
+        166,
+        208,
+        144,
+        84,
+        202,
+        4,
+        219,
+        101,
+        27,
+        5,
+        191,
+        253,
+        154,
+        114,
+        180,
+        197,
+        29,
+        20,
+        124,
+        195,
+        74,
+        32,
+        33,
+        164,
+        51,
+        214,
+        36,
+        65,
+        223,
+        233
+      ]
+    }
+  ]
+}
