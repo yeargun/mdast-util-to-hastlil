@@ -1,0 +1,251 @@
+{
+  "compiler": {
+    "baseRevision": "f7d29bd9",
+    "binarySha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+    "hasLocalSourceChanges": true
+  },
+  "machine": {
+    "cpu": "AMD EPYC 7763 64-Core Processor",
+    "logicalCpus": 8,
+    "memoryGiB": 15.6,
+    "os": "Linux-7.0.0-1014-azure-x86_64-with-glibc2.39",
+    "node": "v20.19.0"
+  },
+  "lilscript": [
+    {
+      "library": "mdast-util-to-hastlil",
+      "objective": "raw",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-raw.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/raw",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 15.945053780000308,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "f03e96c0269beb83d6faf1b0251d26dab67120b9a42b7d98822f6a9d9cd657ae",
+      "measuredAt": "2026-10-02T22:36:12.823613+00:00",
+      "outputSha256": "83b85128179e9c42b4374c1c8cc7a8bcfde9db7a259bdb4657a1d08ddccb5ca0",
+      "raw": 13458
+    },
+    {
+      "library": "mdast-util-to-hastlil",
+      "objective": "gzip",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-gzip.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/gzip",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 13.53950619600073,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "031c63747f9b2a51263f106a640f9d57e0a484927d8ee9e2edd94c86b0b13819",
+      "measuredAt": "2026-10-02T22:36:26.368569+00:00",
+      "outputSha256": "d815e28097c56ba75f6bbdf6a69bf9ea367a8ad99f887315f902e70883050688",
+      "raw": 14406
+    },
+    {
+      "library": "mdast-util-to-hastlil",
+      "objective": "brotli",
+      "command": [
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/bin/lilscript",
+        "--config",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/configs/mdast-util-to-hastlil-brotli.toml",
+        "--target",
+        "js-module",
+        "--mode",
+        "production",
+        "--jobs",
+        "1",
+        "--out-dir",
+        "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/artifacts/mdast-util-to-hastlil/brotli",
+        "--explain",
+        "json",
+        "--cache",
+        "off",
+        "--logical-work",
+        "2000000000"
+      ],
+      "wallSeconds": 28.16636952799672,
+      "returncode": 0,
+      "compilerSha256": "8ff44fabb92c949e68240ce6541038fd52e2f3c04d1a9ac470031e4238541c3a",
+      "configSha256": "b88aadb3b819f41733572d3a05e9ca1d03af35052db39e26c674de6b6e0ea22b",
+      "measuredAt": "2026-10-02T22:36:54.539246+00:00",
+      "outputSha256": "2acde280e93895ff996f803ce02c0b9bcc42859e9dfbe765b379d6a159f18c2d",
+      "raw": 14639
+    }
+  ],
+  "upstream": {
+    "name": "mdast-util-to-hastlil",
+    "package": "mdast-util-to-hast",
+    "version": "13.2.1",
+    "resolveDir": "/home/azureuser/mdast-util-to-hastlil",
+    "output": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil",
+    "entry": "export {defaultFootnoteBackContent,defaultFootnoteBackLabel,defaultHandlers,toHast} from \"mdast-util-to-hast\";",
+    "external": [],
+    "sharedExports": [
+      "defaultFootnoteBackContent",
+      "defaultFootnoteBackLabel",
+      "defaultHandlers",
+      "toHast"
+    ],
+    "excludedExports": [],
+    "additionalExports": [],
+    "resolution": {
+      "platform": "neutral",
+      "conditions": [
+        "production"
+      ],
+      "mainFields": [
+        "module",
+        "main"
+      ],
+      "target": "es2020",
+      "defines": {
+        "process.env.NODE_ENV": "production"
+      }
+    },
+    "minifiers": [
+      {
+        "tool": "Terser",
+        "version": "5.51.2",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/terser.mjs",
+        "sha256": "9e8f4b17637a246caead4975d9481d096bba4b7a4bcbfb9d30a59c54c561845b",
+        "raw": 16709,
+        "imports": [],
+        "wallSeconds": 0.44958391699999994,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "Terser"
+        ]
+      },
+      {
+        "tool": "esbuild",
+        "version": "0.28.1",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/esbuild.mjs",
+        "sha256": "488562853166d60b0a6d81f37cbc47e0b365550ce4021a87aedbf209e848aa96",
+        "raw": 17289,
+        "imports": [],
+        "wallSeconds": 0.06588857800000006,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "esbuild"
+        ]
+      },
+      {
+        "tool": "Oxc",
+        "version": "via Vite 8.2.1",
+        "esbuild": "0.28.1",
+        "artifact": "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/oxc.mjs",
+        "sha256": "a509cffba99116f0c1b1d4a75d277b0d743dd729cc6a86a41031804a547067b3",
+        "raw": 16729,
+        "imports": [],
+        "wallSeconds": 0.18429803400000014,
+        "command": [
+          "/home/azureuser/.nvm/versions/node/v20.19.0/bin/node",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream.mjs",
+          "child",
+          "/home/azureuser/lilscript-rebuild-reports/2026-10-03-pages/upstream/mdast-util-to-hastlil/job.json",
+          "Oxc"
+        ]
+      }
+    ]
+  },
+  "sourceInputs": {
+    "root": 0,
+    "entries": [
+      {
+        "name": "index",
+        "module": 0
+      }
+    ],
+    "modules": [
+      {
+        "path": "/home/azureuser/mdast-util-to-hastlil/src/entry.lil",
+        "bytes": 425,
+        "sha256": "1158713d6d03877bcd4ad8c93c6118c9580a4fc8bc4ab7620fe6b9ccb4ef3e58",
+        "dependencies": [
+          1
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/mdast-util-to-hastlil/src/convert.lil",
+        "bytes": 31726,
+        "sha256": "cdf02a2890cad21a66342cb6c3d2cb6b4f30da68cb25d1fd55eda19134f8b2f4",
+        "dependencies": [
+          2
+        ],
+        "dynamic_dependencies": []
+      },
+      {
+        "path": "/home/azureuser/mdast-util-to-hastlil/src/types.lil",
+        "bytes": 10261,
+        "sha256": "8cedef100ce0b759088a08c4ecf6c9e63dde6ee699cac217fd585ac1add5ff7d",
+        "dependencies": [],
+        "dynamic_dependencies": []
+      }
+    ],
+    "host_modules": [],
+    "host_reserved": []
+  },
+  "validation": {
+    "checks": 1980,
+    "objectives": [
+      {
+        "objective": "raw",
+        "checks": 660,
+        "suite": "differential"
+      },
+      {
+        "objective": "gzip",
+        "checks": 660,
+        "suite": "differential"
+      },
+      {
+        "objective": "brotli",
+        "checks": 660,
+        "suite": "differential"
+      }
+    ],
+    "scope": "Main ESM entry; selected corpora and API checks, not all package formats or complete upstream equivalence."
+  },
+  "workLimit": 2000000000,
+  "timingScope": "One sequential fresh-output build per objective/minifier. Upstream timing is ESM bundling and minification, not original-repository source compilation."
+}
